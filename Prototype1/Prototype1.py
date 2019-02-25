@@ -66,14 +66,48 @@ def Bdecision(RootChoice):
             opsB = False
             print("You put in the wrong input man")
 
+def Adecision(RootChoice):
+    opsA = True
+    while opsA:
+        choice = input("You can choose 'a': ")
+        if choice == "a":
+            UserChoice.append(choice)
+            print(UserChoice)
+            if UserChoice[-1] == "a":
+                choice = input("You can choose 'a1' or 'a2': ")
+                UserChoice.append(choice)
+                print(UserChoice)
+                if UserChoice[-1] == "a1":
+                    choice = input("You can choose 'a3': ")
+                    UserChoice.append(choice)
+                    print(UserChoice)
+                elif UserChoice[-1] == "a2":
+                    choice = input("You can choose 'ab1': ")
+                    UserChoice.append(choice)
+                    print(UserChoice)
+                if UserChoice[-1] == "a3":
+                    choice = input("You can choose 'a4 or 'a5': ")
+                    UserChoice.append(choice)
+                    print(UserChoice)
+                elif UserChoice[-1] == "ab1":
+                    choice = input("You can choose 'ab2': ")
+                    UserChoice.append(choice)
+                    print(UserChoice)
+                if UserChoice[-1] == "a4" or UserChoice[-1] == "a5" or UserChoice[-1] == "ab2":
+                    opsA = False
+                    print(UserChoice)
+        else:
+            opsA = False
+            print("Cash in Hand")
+
 
 #Presents user with Root choices of a, b, or c. Dependent on choice, will call it's associated Function
 RootChoice = input("Choose a, b or c: ")
 if RootChoice == "a":
-    print("A Branch is not made yet!")
+    Adecision(RootChoice)
 elif RootChoice == "b":
     Bdecision(RootChoice)
 elif RootChoice == "c":
-        Cdecision(RootChoice)
+    Cdecision(RootChoice)
 else:
     print("SORRY! Invalid choice!")
