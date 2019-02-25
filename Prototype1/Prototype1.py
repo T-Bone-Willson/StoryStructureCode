@@ -66,6 +66,7 @@ def Bdecision(RootChoice):
             opsB = False
             print("You put in the wrong input man")
 
+#Goes through A Branch options
 def Adecision(RootChoice):
     opsA = True
     while opsA:
