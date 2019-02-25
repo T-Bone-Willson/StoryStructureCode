@@ -23,11 +23,11 @@ def Cdecision(RootChoice):
                         print(UserChoice)
                         if UserChoice[-1] == "c3":
                             #print(UserChoice)
-                            ops = False
+                            opsC = False
                             #break
                             print(UserChoice)
         else:
-            ops = False
+            opsC = False
             print("Sorry You're not a winner")
 
 #Goes through B Branch options
@@ -38,9 +38,33 @@ def Bdecision(RootChoice):
         if choice == "b":
             UserChoice.append(choice)
             print(UserChoice)
+            if UserChoice[-1] == "b":
+                choice = input("You can choose 'b1' or 'b2': ")
+                UserChoice.append(choice)
+                print(UserChoice)
+                if UserChoice[-1] == "b1":
+                    choice = input("You can choose 'ab1': ")
+                    UserChoice.append(choice)
+                    print(UserChoice)
+                elif UserChoice[-1] == "b2":
+                    choice = input("You can choose 'b3': ")
+                    UserChoice.append(choice)
+                    print(UserChoice)
+                if UserChoice[-1] == "ab1":
+                    choice = input("You can choose 'ab2': ")
+                    UserChoice.append(choice)
+                    print(UserChoice)
+                elif UserChoice[-1] == "b3":
+                    choice = input("You can choose 'b4': ")
+                    UserChoice.append(choice)
+                    print(UserChoice)
+                if UserChoice[-1] == "ab2" or UserChoice[-1] == "b4":
+                    opsB = False
+                    print(UserChoice)
+
         else:
             opsB = False
-            print("This is all there is right now")
+            print("You put in the wrong input man")
 
 
 #Presents user with Root choices of a, b, or c. Dependent on choice, will call it's associated Function
