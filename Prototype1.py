@@ -11,7 +11,10 @@
 UserChoice = []
 
 ops = True
-
+###
+##
+##
+##
 #Goes through C options
 while ops:
     choice = input("You can choose 'c': ")
