@@ -86,6 +86,7 @@ def Adecision(RootChoice):
                     choice = input("You can choose 'ab1': ")
                     UserChoice.append(choice)
                     print(UserChoice)
+                #Believe I can't do this (below). Can't do a if-elif-if-elif chain.    
                 if UserChoice[-1] == "a3":
                     choice = input("You can choose 'a4 or 'a5': ")
                     UserChoice.append(choice)
@@ -94,8 +95,8 @@ def Adecision(RootChoice):
                     choice = input("You can choose 'ab2': ")
                     UserChoice.append(choice)
                     print(UserChoice)
-                if UserChoice[-1] == "a4" or UserChoice[-1] == "a5" or UserChoice[-1] == "ab2":
-                    opsA = False
+                if UserChoice[-1] == "a4" or UserChoice[-1] == "a5" or UserChoice[-1] == "ab2": #Issues: program can end after first element been added to list
+                    opsA = False                                                                # OR operation chain allows user to input end nodes into list. Stops while loop.
                     print(UserChoice)
         else:
             opsA = False
