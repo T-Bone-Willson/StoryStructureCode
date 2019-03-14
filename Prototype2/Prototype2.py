@@ -5,7 +5,7 @@ UserChoice = []
 graph_elements = {"a" : ["a1", "a2"],
          "a1" : ["a3"],
          "a3" : ["a4", "a5"],
-         "a4" : [], #Key will be empty since there are no more nodes connected to it
+         "a4" : [], # Key will be empty since there are no more nodes connected to it
          "a5" : [],
          "a2" : ["ab1"],
          "ab1" : ["ab2"],
@@ -48,37 +48,15 @@ g = graph(graph_elements) # name of the Dictionary
 print(g.getNodes()) # Print all nodes in graph
 print(g.getEdges()) # print all edges within graph
 
-#def Cdecision(self, RootChoice = 'c'):
-#    opsC = True
-#    while opsC:
-#        choice = input("You can choose 'c': ")
-#        if choice == "c":
-#            UserChoice.append(choice)
-#            self.graph_dictionary.key()
-#            if self.graph_dictionary.key() == "c":
-#                choice = input("You can choose 'c1': ")
-#                UserChoice.append(choice)
-#                self.graph_dictionary.key()
-#                if self.graph_dictionary.key() == "c1":
-#                    choice = input("You can choose 'c2': ")
-#                    UserChoice.append(choice)
-#                    self.graph_dictionary.key()
-#                    if self.graph_dictionary.key() == "c2":
-#                        choice = input("You can choose 'c3': ")
-#                        UserChoice.append(choice)
-#                        self.graph_dictionary.key()
-#                        print(UserChoice)
-#                        print(g.Cdecision())
-#        else:
-#            print("Wrong Input!")
-
+# The following 3 functions belong to the "C" Branch of choices
+# Start of C branch chain. Triggerd by User making choice "C" at start of program.
 def C_Chain(RootChoice):
-    UserChoice.append("c")
+    UserChoice.append("c") # Adds Branch root to List
     choice = input("You can choose 'c1': ")
-    if choice == "c1":
+    if choice == "c1": # player needs to input this in order to proceed through branch
         UserChoice.append(choice)
         print(UserChoice)
-        c1()
+        c1() # Triggers c1() function. Traverse deeper down C Branch.
     else:
         print("Test 1")
 
@@ -87,8 +65,19 @@ def c1():
     if choice == "c2":
         UserChoice.append(choice)
         print(UserChoice)
+        c2() # Triggers c2() function. Traverse deeper down the C Branch
     else:
         print("Test 2")
+
+def c2():
+    choice = input("You can choose 'c3': ")
+    if choice == "c3":
+        UserChoice.append(choice)
+        print(UserChoice)
+        print("You have reached the end of this branch!")
+    else:
+        print("Test 3")
+
 
 #Presents user with Root choices of a, b, or c. Dependent on choice, will call it's associated Function
 RootChoice = input("Choose a, b or c: ")
