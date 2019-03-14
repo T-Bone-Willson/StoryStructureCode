@@ -54,7 +54,7 @@ print(g.getEdges()) # print all edges within graph
 ###                                                          ###
 ################################################################
 
-
+# Start of A branch chain. Triggerd by User making choice "a" at start of program.
 def A_Chain(RootChoice):
     UserChoice.append("a") # Adds Branch root to List
     choice = input("You can choose 'a1' or 'a2': ")
@@ -110,7 +110,62 @@ def ab1():
         print("Test ab2: Invalid choice!")
 
 
+################################################################
+###                                                          ###
+###                B Branch Function Code                    ###
+###                                                          ###
+################################################################
 
+# Start of B branch chain. Triggerd by User making choice "b" at start of program.
+def B_Chain(RootChoice):
+    UserChoice.append("b") # Adds Branch root to List
+    choice = input("You can choose 'b1 or 'b2': ")
+    if choice == "b1":
+        UserChoice.append(choice)
+        print(UserChoice)
+        b1()
+    elif choice == "b2":
+        UserChoice.append(choice)
+        print(UserChoice)
+        b2()
+    else:
+        print("Test b1 and b2: Invalid choice!")
+
+def b1():
+    choice = input("You can choose 'ab1': ")
+    if choice == "ab1":
+        UserChoice.append(choice)
+        print(UserChoice)
+        ab1()
+    else:
+        print("Test ab1: Invalid choice!")
+
+def ab1():
+    choice = input("You can choose 'ab2': ")
+    if choice == "ab2":
+        UserChoice.append(choice)
+        print(UserChoice)
+        print("You have reached the end of this branch!")
+    else:
+        print("Test ab2: Invalid choice!")
+
+def b2():
+    choice = input("You can choose 'b3': ")
+    if choice == "b3":
+        UserChoice.append(choice)
+        print(UserChoice)
+        b3()
+    else:
+        print("Test b3: Invalid choice!")
+
+def b3():
+    choice = input("You can choose 'b4': ")
+    if choice == "b4":
+        UserChoice.append(choice)
+        print(UserChoice)
+        print("You have reached the end of this branch!")
+    else:
+        print("Test b4: Invalid choice!")
 
 
 ################################################################
@@ -119,7 +174,7 @@ def ab1():
 ###                                                          ###
 ################################################################
 
-# The following 3 functions belong to the "C" Branch of choices
+# The following 3 functions belong to the "a" Branch of choices
 # Start of C branch chain. Triggerd by User making choice "C" at start of program.
 def C_Chain(RootChoice):
     UserChoice.append("c") # Adds Branch root to List
@@ -154,8 +209,8 @@ def c2():
 RootChoice = input("Choose a, b or c: ")
 if RootChoice == "a":
     A_Chain(RootChoice)
-#elif RootChoice == "b":
-    #Bdecision(RootChoice)
+elif RootChoice == "b":
+    B_Chain(RootChoice)
 elif RootChoice == "c":
     C_Chain(RootChoice)
 else:
