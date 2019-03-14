@@ -42,7 +42,7 @@ class graph:
         return edge_name
 
 # "g" is assigned the graph element values from the class graph
-g = graph(graph_elements)
+g = graph(graph_elements) # name of the Dictionary
 
 #Print test statement
 print(g.getNodes()) # Print all nodes in graph
@@ -74,7 +74,15 @@ print(g.getEdges()) # print all edges within graph
 
 def C_Chain(RootChoice):
     UserChoice.append("c")
-    print(UserChoice)
+    choice = input("You can choose 'c1': ")
+    if choice == "c1":
+        UserChoice.append("c1")
+        print(UserChoice)
+    else:
+        print("Need to make a calid choice")
+
+
+
 
 
 
