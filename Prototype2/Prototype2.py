@@ -1,4 +1,4 @@
-# users choicec stored in an empty list.
+# users choice stored in an empty list.
 UserChoice = []
 
 # Diciontary for Key Nodes and their corresponding Edges
@@ -54,6 +54,7 @@ print(g.getEdges()) # print all edges within graph
 ###                                                          ###
 ################################################################
 
+# The following 5 functions belong to the "a" Branch of choices
 # Start of A branch chain. Triggerd by User making choice "a" at start of program.
 def A_Chain(RootChoice):
     UserChoice.append("a") # Adds Branch root to List
@@ -109,13 +110,13 @@ def ab1():
     else:
         print("Test ab2: Invalid choice!")
 
-
 ################################################################
 ###                                                          ###
 ###                B Branch Function Code                    ###
 ###                                                          ###
 ################################################################
 
+# The following 5 functions belong to the "b" Branch of choices
 # Start of B branch chain. Triggerd by User making choice "b" at start of program.
 def B_Chain(RootChoice):
     UserChoice.append("b") # Adds Branch root to List
@@ -167,14 +168,13 @@ def b3():
     else:
         print("Test b4: Invalid choice!")
 
-
 ################################################################
 ###                                                          ###
 ###                C Branch Function Code                    ###
 ###                                                          ###
 ################################################################
 
-# The following 3 functions belong to the "a" Branch of choices
+# The following 3 functions belong to the "c" Branch of choices
 # Start of C branch chain. Triggerd by User making choice "C" at start of program.
 def C_Chain(RootChoice):
     UserChoice.append("c") # Adds Branch root to List
@@ -204,14 +204,19 @@ def c2():
     else:
         print("Test 3")
 
+################################################################
+###                                                          ###
+###                    Start of Program                      ###
+###                                                          ###
+################################################################
 
 #Presents user with Root choices of a, b, or c. Dependent on choice, will call it's associated Function
 RootChoice = input("Choose a, b or c: ")
 if RootChoice == "a":
-    A_Chain(RootChoice)
+    A_Chain(RootChoice) # Goes to A branch funtion chains
 elif RootChoice == "b":
-    B_Chain(RootChoice)
+    B_Chain(RootChoice) # Goes to B branch function chains
 elif RootChoice == "c":
-    C_Chain(RootChoice)
+    C_Chain(RootChoice) # Goes to C branch function chains
 else:
-    print("SORRY! Invalid choice!")
+    print("SORRY! Invalid choice!") # error handler... kinda
