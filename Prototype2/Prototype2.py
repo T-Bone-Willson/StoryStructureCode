@@ -76,18 +76,19 @@ def C_Chain(RootChoice):
     UserChoice.append("c")
     choice = input("You can choose 'c1': ")
     if choice == "c1":
-        UserChoice.append("c1")
+        UserChoice.append(choice)
+        print(UserChoice)
+        c1()
+    else:
+        print("Test 1")
+
+def c1():
+    choice = input("You can choose 'c2': ")
+    if choice == "c2":
+        UserChoice.append(choice)
         print(UserChoice)
     else:
-        print("Need to make a calid choice")
-
-
-
-
-
-
-
-
+        print("Test 2")
 
 #Presents user with Root choices of a, b, or c. Dependent on choice, will call it's associated Function
 RootChoice = input("Choose a, b or c: ")
