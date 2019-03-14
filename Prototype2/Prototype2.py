@@ -48,6 +48,59 @@ g = graph(graph_elements) # name of the Dictionary
 print(g.getNodes()) # Print all nodes in graph
 print(g.getEdges()) # print all edges within graph
 
+################################################################
+###                                                          ###
+###                A Branch Function Code                    ###
+###                                                          ###
+################################################################
+
+
+def A_Chain(RootChoice):
+    UserChoice.append("a") # Adds Branch root to List
+    choice = input("You can choose 'a1' or 'a2': ")
+    if choice == "a1": # player needs to input this in order to proceed through branch
+        UserChoice.append(choice)
+        print(UserChoice)
+        a1()
+    elif choice == "a2": # Will unlock a2() function/branch.
+        UserChoice.append(choice)
+        print(UserChoice)
+    else:
+        print("Test a1 and a2: Invalid choice!")
+
+def a1():
+    choice = input("You can choose 'a3': ")
+    if choice == "a3":
+        UserChoice.append(choice)
+        print(UserChoice)
+        a3()
+    else:
+        print("Test a3: Invalid choice!")
+
+def a3():
+    choice = input("You can choose 'a4' or 'a5': ")
+    if choice == "a4":
+        UserChoice.append(choice)
+        print(UserChoice)
+        print("You have reached the end of this branch!")
+    elif choice == "a5":
+        UserChoice.append(choice)
+        print(UserChoice)
+        print("You have reached the end of this branch!")
+    else:
+        print("Test a4 and a5: Invalid choice!")
+
+
+
+
+
+
+################################################################
+###                                                          ###
+###                C Branch Function Code                    ###
+###                                                          ###
+################################################################
+
 # The following 3 functions belong to the "C" Branch of choices
 # Start of C branch chain. Triggerd by User making choice "C" at start of program.
 def C_Chain(RootChoice):
@@ -81,11 +134,11 @@ def c2():
 
 #Presents user with Root choices of a, b, or c. Dependent on choice, will call it's associated Function
 RootChoice = input("Choose a, b or c: ")
-#if RootChoice == "a":
-    #Adecision(RootChoice)
+if RootChoice == "a":
+    A_Chain(RootChoice)
 #elif RootChoice == "b":
     #Bdecision(RootChoice)
-if RootChoice == "c":
+elif RootChoice == "c":
     C_Chain(RootChoice)
 else:
     print("SORRY! Invalid choice!")
