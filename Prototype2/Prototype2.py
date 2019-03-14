@@ -65,7 +65,6 @@ def A_Chain(RootChoice):
     elif choice == "a2": # Will unlock a2() function/branch.
         UserChoice.append(choice)
         print(UserChoice)
-        a2()
     else:
         print("Test a1 and a2: Invalid choice!")
 
@@ -91,23 +90,6 @@ def a3():
     else:
         print("Test a4 and a5: Invalid choice!")
 
-def a2():
-    choice = input("You can choose 'ab1': ")
-    if choice == "ab1":
-        UserChoice.append(choice)
-        print(UserChoice)
-        ab1()
-    else:
-        print("Test ab1: Invalid choice")
-
-def ab1():
-    choice = input("You can choose 'ab2': ")
-    if choice == "ab2":
-        UserChoice.append(choice)
-        print(UserChoice)
-        print("You have reached the end of this branch!")
-    else:
-        print("Test ab2: Invalid choice!")
 
 
 
