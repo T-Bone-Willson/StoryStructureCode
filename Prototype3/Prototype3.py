@@ -7,20 +7,25 @@ UserChoice = []
 ###                                                          ###
 ################################################################
 
+# Start of Adventure branch chain. Triggerd by User making choice "a" at start of program.
 def A_Chain(RootChoice):
-    UserChoice.append("a")
+    UserChoice.append("a") # Adds Branch root to List
     choice = input("You can choose 'a1' or 'a2': ")
-    if choice == "a1":
+    if choice == "a1": # player needs to input this in order to proceed through branch
         UserChoice.append(choice)
         print(UserChoice)
         a1()
-    elif choice == "a2":
+    elif choice == "a2": # Will unlock a2() function/branch.
         UserChoice.append(choice)
         print(UserChoice)
         a2()
     else:
-        print("Test a1 and a2: Invalid Choice!")
+        print("Test a1 and a2: Invalid choice!")
 
+# a1() function means the elixir is not a person.
+# by having element "a1" in UserChoice List, it means that
+# Function a9() will be unlocked automaticaly
+# but will close off Function a10()
 def a1():
     choice = input("You can choose 'a3': ")
     if choice == "a3":
@@ -30,6 +35,10 @@ def a1():
     else:
         print("Test a1()-a3: Invalid choice!")
 
+# a2() function means the elixir is a person.
+# by having element "a2" in UserChoice List, it means that
+# Function a10() will be unlocked automaticaly
+# but will close off Function a9()
 def a2():
     choice = input("You can choose 'a3': ")
     if choice == "a3":
@@ -89,7 +98,7 @@ def a8():
     # If so, it means branch chains a10 and onwards are unlocked
     if 'a2' in UserChoice:
         choice = input("You can choose 'a10': ")
-        if choice == "a10":
+        if choice == "a10": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
             print(UserChoice)
             a10()
@@ -97,31 +106,62 @@ def a8():
     # If so, then branch chains a9, a13 and a14 are unlocked
     elif 'a1' in UserChoice:
         choice = input("You can choose 'a9': ")
-        if choice == "a9":
+        if choice == "a9": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
             print(UserChoice)
             a9()
     else:
-        print("NOPE")
+        print("Test a9 OR a10: Invalid choice!")
 
 # Adventure Branch with no possible love interest is operated from this chain
 def a9():
-    print("You got to a9 Node!")
+    choice = input("You can choose 'a13': ")
+    if choice == "a13":
+        UserChoice.append(choice)
+        print(UserChoice)
+        print("You have reached the end of this Branch!")
+    else:
+        print("Test a13: Invalid choice!")
 
 # Adventure Branch with possible love interest is operated from this chain
 def a10():
-    print("You got to a10 Node!")
+    choice = input("You can choose 'a11' or 'a12': ")
+    if choice == "a11":
+        UserChoice.append(choice)
+        print(UserChoice)
+        a11()
+    elif choice == 'a12':
+        UserChoice.append(choice)
+        print(UserChoice)
+        a12()
+    else:
+        print("Test a11 and a12: Invalid choice!")
 
+def a11():
+    choice = input("You can choose 'a13' or 'a14': ")
+    if choice == "a13":
+        UserChoice.append(choice)
+        print(UserChoice)
+        print("You have reached the end of this Branch!")
+    elif choice == 'a14':
+        UserChoice.append(choice)
+        print(UserChoice)
+        print("You have reached the end of this Branch!")
+    else:
+        print("Test a11()-a13 and a11()-a14: Invalid choice!")
 
-
-
-
-
-
-
-
-
-
+def a12():
+    choice = input("You can choose 'a13' or 'a14': ")
+    if choice == "a13":
+        UserChoice.append(choice)
+        print(UserChoice)
+        print("You have reached the end of this Branch!")
+    elif choice == 'a14':
+        UserChoice.append(choice)
+        print(UserChoice)
+        print("You have reached the end of this Branch!")
+    else:
+        print("Test a12()-a13 and a12()-a14: Invalid choice!")
 
 ################################################################
 ###                                                          ###
