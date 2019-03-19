@@ -86,12 +86,31 @@ def a7():
 
 def a8():
     # Checks to see if element "a2" exist in UserChoice List
-    # If so, it means branch chains V10 and onwards are unlocked
-    # If not, then branch chains a9, a13 and a14 are unlocked
+    # If so, it means branch chains a10 and onwards are unlocked
     if 'a2' in UserChoice:
-        print("a2 element search in list works")
+        choice = input("You can choose 'a10': ")
+        if choice == "a10":
+            UserChoice.append(choice)
+            print(UserChoice)
+            a10()
+    # Checks to see if element "a1" exist in UserChoice List
+    # If so, then branch chains a9, a13 and a14 are unlocked
+    elif 'a1' in UserChoice:
+        choice = input("You can choose 'a9': ")
+        if choice == "a9":
+            UserChoice.append(choice)
+            print(UserChoice)
+            a9()
     else:
         print("NOPE")
+
+# Adventure Branch with no possible love interest is operated from this chain
+def a9():
+    print("You got to a9 Node!")
+
+# Adventure Branch with possible love interest is operated from this chain
+def a10():
+    print("You got to a10 Node!")
 
 
 
