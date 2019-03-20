@@ -1,6 +1,10 @@
 # users choice stored in an empty list.
 UserChoice = []
 
+# Global Variables for Node definition
+a1 = "a1: The elixir is an object"
+a2 = "a2: The elixir is a person"
+
 ################################################################
 ###                                                          ###
 ###              Adventure Branch Function Code              ###
@@ -10,6 +14,12 @@ UserChoice = []
 # Start of Adventure branch chain. Triggerd by User making choice "a" at start of program.
 def A_Chain(RootChoice):
     UserChoice.append("a") # Adds Branch root to List
+    global a1
+    global a2
+    a1 = "a1: The elixir is an object"
+    a2 = "a2: The elixir is a person"
+    print(a1)
+    print(a2)
     choice = input("You can choose 'a1' or 'a2': ")
     if choice == "a1": # player needs to input this in order to proceed through branch
         UserChoice.append(choice)
