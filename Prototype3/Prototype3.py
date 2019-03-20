@@ -14,8 +14,12 @@ a2 = "a2: The elixir is a person"
 # Start of Adventure branch chain. Triggerd by User making choice "a" at start of program.
 def A_Chain(RootChoice):
     UserChoice.append("a") # Adds Branch root to List
+    # For reasons I don't fully understand, I have to state it as global
+    # Even though it has been declared global, outside the scope of the function
     global a1
     global a2
+    # Then reassign the value to the "global a1" or "global a2"
+    # This is duplicating the code and it's not what I originally intended.
     a1 = "a1: The elixir is an object"
     a2 = "a2: The elixir is a person"
     print(a1)
