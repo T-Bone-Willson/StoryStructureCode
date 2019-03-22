@@ -269,8 +269,105 @@ def q7():
     else:
         print("Test q8: Invalid choice!")
 
+################################################################
+###                         ACT 2                            ###
+################################################################
+
 def q8():
-    print("You have gotten to the end of Act 1!")
+    # Checks to see if element "q5" exist in UserChoice List
+    # If so, it means branch chains q11 are unlocked
+    if 'q5' in UserChoice:
+        choice = input("You can choose 'q11': ")
+        if choice == "q11": # Goes back to checking if input condition has been met
+            UserChoice.append(choice)
+            print(UserChoice)
+            q11()
+        else:
+            print("Test q11: Invalid choice!")
+    # Checks to see if element "q4" exist in UserChoice List
+    # If so, then branch chains q9 and q10 are unlocked
+    elif 'q4' in UserChoice:
+        choice = input("You can choose 'q9' or 'q10': ")
+        if choice == "q9": # Goes back to checking if input condition has been met
+            UserChoice.append(choice)
+            print(UserChoice)
+            q9()
+        elif choice == "q10":
+            UserChoice.append(choice)
+            print(UserChoice)
+            q10()
+        else:
+            print("Test q9 and q10: Invalid choice!")
+    else:
+        print("Test q9, q10 and q11: Invalid choice!")
+
+def q9():
+    choice = input("You can choose 'q15': ")
+    if choice == "q15":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q15()
+    else:
+        print("Test q9()-q15: Invalid choice!")
+
+def q10():
+    choice = input("You can choose 'q15': ")
+    if choice == "q15":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q15()
+    else:
+        print("Test q10()-q15: Invalid choice!")
+
+def q11():
+    choice = input("You can choose 'q12' or 'q13': ")
+    if choice == "q12":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q14()
+    elif choice == "q13":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q14()
+    else:
+        print("Test q12 and q13: Invalid choice!")
+
+def q14():
+    choice = input("You can choose 'q15': ")
+    if choice == "q15":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q15()
+    else:
+        print("Test q14()-q15: Invalid choice!")
+
+def q15():
+    choice = input("You can choose 'q16': ")
+    if choice == "q16":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q16()
+    else:
+        print("Test q16: Invalid choice!")
+
+def q16():
+    choice = input("You can choose 'q17' or 'q34': ")
+    if choice == "q17":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q17()
+    elif choice == "q34":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q34()
+    else:
+        print("Test q17 and q34: Invalid choice!")
+
+def q17():
+    print("You have reached Q17")
+
+def q34():
+    print("You have reached Q34")
 
 ################################################################
 ###                                                          ###
