@@ -491,7 +491,108 @@ def q25():
         print("Test q26 and q34: Invalid choice!")
 
 def q26():
-    print("You have reached Q26")
+    # Checks to see if element "q5" exist in UserChoice List
+    # If so, it means branch chains q29 are unlocked
+    # But also lets the User can down the q27 and q28 path.
+    if 'q5' in UserChoice:
+        choice = input("You can choose 'q27', 'q28' or 'q29': ")
+        if choice == "q27": # Goes back to checking if input condition has been met
+            UserChoice.append(choice)
+            print(UserChoice)
+            q27()
+        elif choice == "q28": # Goes back to checking if input condition has been met
+            UserChoice.append(choice)
+            print(UserChoice)
+            q28()
+        elif choice == "q29":
+            UserChoice.append(choice)
+            print(UserChoice)
+            q29()
+        else:
+            print("Test q27, q28 and q29: Invalid choice!")
+    # Checks to see if element "q4" exist in UserChoice List
+    # If so, then branch chains q27 and q28 are unlocked
+    elif 'q4' in UserChoice:
+        choice = input("You can choose 'q27' or 'q28': ")
+        if choice == "q27": # Goes back to checking if input condition has been met
+            UserChoice.append(choice)
+            print(UserChoice)
+            q27()
+        elif choice == "q28":
+            UserChoice.append(choice)
+            print(UserChoice)
+            q28()
+        else:
+            print("Test q18 and q19: Invalid choice!")
+    else:
+        print("Test q27, q28 and q29: Invalid choice!")
+
+def q27():
+    choice = input("You can choose 'q33': ")
+    if choice == "q33":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q33()
+    else:
+        print("Test q27()-q33: Invalid choice!")
+
+def q28():
+    choice = input("You can choose 'q33': ")
+    if choice == "q33":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q33()
+    else:
+        print("Test q28()-q33: Invalid choice!")
+
+def q29():
+    choice = input("You can choose 'q30' or 'q31': ")
+    if choice == "q30":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q30()
+    elif choice == "q31":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q31()
+    else:
+        print("Test q30 and q31: Invalid choice!")
+
+def q30():
+    choice = input("You can choose 'q32': ")
+    if choice == "q32":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q32()
+    else:
+        print("Test q30()-q32: Invalid choice!")
+
+def q31():
+    choice = input("You can choose 'q32': ")
+    if choice == "q32":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q32()
+    else:
+        print("Test q31()-q32: Invalid choice!")
+
+def q32():
+    choice = input("You can choose 'q33': ")
+    if choice == "q33":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q33()
+    else:
+        print("Test q32()-q33: Invalid choice!")
+
+def q33():
+    choice = input("You can choose'q34': ")
+    if choice == "q34":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q34()
+    else:
+        print("Test q34: Invalid choice!")
 
 # Leads to Node that intiates Act 3
 def q34():
