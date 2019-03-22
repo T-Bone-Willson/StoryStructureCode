@@ -179,15 +179,110 @@ def a12():
 
 ################################################################
 ###                                                          ###
+###                Quest Branch Function Code                ###
+###                                                          ###
+################################################################
+
+################################################################
+###                         ACT 1                            ###
+################################################################
+
+def Q_Chain(RootChoice):
+    UserChoice.append("q") # Adds Branch root to List
+    choice = input("You can choose 'q2' or 'q3': ")
+    if choice == "q2": # player needs to input this in order to proceed through branch
+        UserChoice.append(choice)
+        print(UserChoice)
+        q2()
+    elif choice == "q3": # Will unlock a2() function/branch.
+        UserChoice.append(choice)
+        print(UserChoice)
+        q3()
+    else:
+        print("Test q2 and q3: Invalid choice!")
+
+def q2():
+    choice = input("You can choose 'q3': ")
+    if choice == "q3":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q3()
+    else:
+        print("Test q3: Invalid choice!")
+
+def q3():
+    choice = input("You can choose 'q4' or 'q5': ")
+    if choice == "q4":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q4()
+    # This unlocks the Buddy Quest/Event choices for Act 2.
+    elif choice == "q5":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q5()
+    else:
+        print("Test q4 and q5: Invalid choice!")
+
+def q4():
+    choice = input("You can choose 'q6' or 'q7': ")
+    if choice == "q6":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q6() # Unlocks "Helper" charecter.
+    elif choice == "q7":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q7()
+    else:
+        print("Test q4()-q6 and q4()-q7: Invalid choice!")
+
+def q5():
+    choice = input("You can choose 'q6' or 'q7': ")
+    if choice == "q6":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q6()
+    elif choice == "q7":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q7()
+    else:
+        print("Test q5()-q6 and q5()-q7: Invalid choice!")
+
+# This only happens if Buddy has been unlocked.
+def q6():
+    choice = input("You can choose 'q7': ")
+    if choice == "q7":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q7()
+    else:
+        print("Test q7: Invalid choice!")
+
+def q7():
+    choice = input("You can choose 'q8': ")
+    if choice == "q8":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q8()
+    else:
+        print("Test q8: Invalid choice!")
+
+def q8():
+    print("You have gotten to the end of Act 1!")
+
+################################################################
+###                                                          ###
 ###                    Start of Program                      ###
 ###                                                          ###
 ################################################################
 
 #Presents user with Root choices of a, b, or c. Dependent on choice, will call it's associated Function
-RootChoice = input("Choose a or v: ")
+RootChoice = input("Choose a or q: ")
 if RootChoice == "a":
     A_Chain(RootChoice) # Goes to A branch funtion chains
-#elif RootChoice == "v":
-#    V_Chain(RootChoice) # Goes to B branch function chains
+elif RootChoice == "q":
+    Q_Chain(RootChoice) # Goes to B branch function chains
 else:
     print("SORRY! Invalid choice!") # error handler... kinda
