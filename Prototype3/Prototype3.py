@@ -819,6 +819,10 @@ def q40():
 ###                                                          ###
 ################################################################
 
+################################################################
+###                         ACT 1                            ###
+################################################################
+
 def VandR_Chain(RootChoice):
     # Node v is "Home"
     UserChoice.append("v") # Adds Branch root to List
@@ -859,6 +863,10 @@ def v2():
         v3()
     else:
         print("Test v2()-v3: Invalid choice!")
+
+################################################################
+###                         ACT 2                            ###
+################################################################
 
 # Node v3 is "Protagonist is taken to 'other/abnormal world' which is
 # caused by the Inciting Incident 'v1' OR 'v2'"
@@ -963,6 +971,10 @@ def v10():
         v11()
     else:
         print("Test v11: Invalid choice!")
+
+################################################################
+###                         ACT 3                            ###
+################################################################
 
 # Node v11 is "Climax: The result of what happens to Protagonist from previous Event."
 def v11():
