@@ -594,9 +594,101 @@ def q33():
     else:
         print("Test q34: Invalid choice!")
 
+################################################################
+###                         ACT 3                            ###
+################################################################
+
 # Leads to Node that intiates Act 3
 def q34():
-    print("You have reached Q34")
+    choice = input("You can choose 'q35' or 'q36': ")
+    if choice == "q35":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q35()
+    elif choice == "q36":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q36()
+    else:
+        print("Test q35 and q36: Invalid choice!")
+
+def q35():
+    choice = input("You can choose 'q36': ")
+    if choice == "q36":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q36()
+    else:
+        print("Test q35()-q36: Invalid choice!")
+
+def q36():
+    choice = input("You can choose 'q37' or 'q38': ")
+    if choice == "q37":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q37()
+    elif choice == "q38":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q38()
+    else:
+        print("Test q37 and q38: Invalid choice!")
+
+def q37():
+    choice = input("You can choose 'q39' or 'q40': ")
+    if choice == "q39":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q39()
+    elif choice == "q40":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q40()
+    else:
+        print("Test q37()-q39 and q37()-q40: Invalid choice!")
+
+def q38():
+    choice = input("You can choose 'q39' or 'q40': ")
+    if choice == "q39":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q39()
+    elif choice == "q40":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q40()
+    else:
+        print("Test q38()-q39 and q38()-q40: Invalid choice!")
+
+def q39():
+    choice = input("You can choose 'q41' or 'q42': ")
+    if choice == "q41":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q41()
+    elif choice == "q42":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q42()
+    else:
+        print("Test q39()-q41 and q39()-q42: Invalid choice!")
+
+def q40():
+    choice = input("You can choose 'q41' or 'q42': ")
+    if choice == "q41":
+        UserChoice.append(choice)
+        print(UserChoice)
+        print("You have reached the end of the Quest Branch!")
+    elif choice == "q42":
+        UserChoice.append(choice)
+        print(UserChoice)
+        print("You have reached the end of the Quest Branch!")
+    else:
+        print("Test q40()-q41 and q40()-q42: Invalid choice!")
+
+################################################################
+###                 Quest Branch Code Finished               ###
+################################################################   
 
 ################################################################
 ###                                                          ###
