@@ -197,7 +197,7 @@ def Q_Chain(RootChoice):
         UserChoice.append(choice)
         print(UserChoice)
         q2()
-    elif choice == "q3": # Will unlock a2() function/branch.
+    elif choice == "q3":
         UserChoice.append(choice)
         print(UserChoice)
         q3()
@@ -374,7 +374,7 @@ def q11():
 # Node q12 is "Buddy Quest 1 Passed"
 def q12():
     # Node q14 is "Resolution of Buddy Quest 1"
-    choice = input("You can choose q14": )
+    choice = input("You can choose q14: ")
     if choice == "q14":
         UserChoice.append(choice)
         print(UserChoice)
@@ -815,15 +815,46 @@ def q40():
 
 ################################################################
 ###                                                          ###
+###               Voyage and return Branch Code              ###
+###                                                          ###
+################################################################
+
+def VandR_Chain(RootChoice):
+    # Node v is "Home"
+    UserChoice.append("v") # Adds Branch root to List
+    # Node v1 is "Inciting Incident: With no Intent of it to happen."
+    # Node v2 is "Inciting Incident: With a vague sense of Intent of it to happen"
+    choice = input("You can choose 'v1' or 'v2': ")
+    if choice == "v1": # player needs to input this in order to proceed through branch
+        UserChoice.append(choice)
+        print(UserChoice)
+        v1()
+    elif choice == "v2":
+        UserChoice.append(choice)
+        print(UserChoice)
+        v2()
+    else:
+        print("Test v1 and V2: Invalid choice!")
+
+def v1():
+    print("V1 Test!")
+
+def v2():
+    print("V2 Test!")
+
+################################################################
+###                                                          ###
 ###                    Start of Program                      ###
 ###                                                          ###
 ################################################################
 
 #Presents user with Root choices of a, b, or c. Dependent on choice, will call it's associated Function
-RootChoice = input("Choose a or q: ")
+RootChoice = input("Choose a, q or v: ")
 if RootChoice == "a":
-    A_Chain(RootChoice) # Goes to A branch funtion chains
+    A_Chain(RootChoice) # Goes to Adventure Branch Code
 elif RootChoice == "q":
-    Q_Chain(RootChoice) # Goes to B branch function chains
+    Q_Chain(RootChoice) # Goes to Quest Branch Code
+elif RootChoice == "v":
+    VandR_Chain(RootChoice) # Goes to Voyage and return Branch Code
 else:
     print("SORRY! Invalid choice!") # error handler... kinda
