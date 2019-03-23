@@ -838,7 +838,8 @@ def VandR_Chain(RootChoice):
 
 # Node v1 is "Inciting Incident: With no Intent of it to happen."
 def v1():
-    # Node v3 is "Protagonist is taken to Strange/Abnormal world"
+    # Node v3 is "Protagonist is taken to 'other/abnormal world' which is
+    # caused by the Inciting Incident 'v1' OR 'v2'"
     choice = input("You can choose 'v3': ")
     if choice == "v3":
         UserChoice.append(choice)
@@ -849,7 +850,8 @@ def v1():
 
 # Node v2 is "Inciting Incident: With a vague sense of Intent of it to happen"
 def v2():
-    # Node v3 is "Protagonist is taken to Strange/Abnormal world"
+    # Node v3 is "Protagonist is taken to 'other/abnormal world' which is
+    # caused by the Inciting Incident"
     choice = input("You can choose 'v3': ")
     if choice == "v3":
         UserChoice.append(choice)
@@ -858,7 +860,11 @@ def v2():
     else:
         print("Test v2()-v3: Invalid choice!")
 
+# Node v3 is "Protagonist is taken to 'other/abnormal world' which is
+# caused by the Inciting Incident 'v1' OR 'v2'"
 def v3():
+    # Node v4 is "Protagonist Wants to explore the new 'other/abnormal world'."
+    # Node v5 is "Protagonist wants to imediately find their way back Home"
     choice = input("You can choose 'v4' or 'v5': ")
     if choice == "v4":
         UserChoice.append(choice)
@@ -871,7 +877,10 @@ def v3():
     else:
         print("Test v4 and v5: Invalid choice!")
 
+# Node v4 is "Protagonist Wants to explore the new 'other/abnormal world'."
 def v4():
+    # Node v6 is "There is no Love Interest character in story."
+    # Node v7 is "Protagonist meets Love Interest charecter."
     choice = input("You can choose 'v6' or 'v7': ")
     if choice == "v6":
         UserChoice.append(choice)
@@ -884,7 +893,10 @@ def v4():
     else:
         print("Test v4()-v6 and v4()-v7: Invalid choice!")
 
+# Node v5 is "Protagonist wants to imediately find their way back Home"
 def v5():
+    # Node v6 is "There is no Love Interest character in story."
+    # Node v7 is "Protagonist meets Love Interest charecter."
     choice = input("You can choose 'v6' or 'v7': ")
     if choice == "v6":
         UserChoice.append(choice)
@@ -897,7 +909,9 @@ def v5():
     else:
         print("Test v5()-v6 and v5()-v7: Invalid choice!")
 
+# Node v6 is "There is no Love Interest character in story."
 def v6():
+    # Node v8 is "Protagonist learns about the 'other/abnormal world' that they are in."
     choice = input("You can choose 'v8': ")
     if choice == "v8":
         UserChoice.append(choice)
@@ -906,7 +920,9 @@ def v6():
     else:
         print("Test v6()-v8: Invalid choice!")
 
+# Node v7 is "Protagonist meets Love Interest charecter."
 def v7():
+    # Node v8 is "Protagonist learns about the 'other/abnormal world' that they are in."
     choice = input("You can choose 'v8': ")
     if choice == "v8":
         UserChoice.append(choice)
@@ -915,7 +931,9 @@ def v7():
     else:
         print("Test v7()-v8: Invalid choice!")
 
+# Node v8 is "Protagonist learns about the 'other/abnormal world' that they are in."
 def v8():
+    # Node v9 is "Midpoint: Protagonist Frustration of 'other/abnormal world' predicament."5
     choice = input("You can choose 'v9': ")
     if choice == "v9":
         UserChoice.append(choice)
@@ -924,7 +942,9 @@ def v8():
     else:
         print("Test v9: Invalid choice!")
 
+# Node v9 is "Midpoint: Protagonist Frustration of 'other/abnormal world' predicament."
 def v9():
+    # Node v10 is "The Threat to the Protagonist becomes evidently more clear"
     choice = input("You can choose 'v10': ")
     if choice == "v10":
         UserChoice.append(choice)
@@ -933,7 +953,9 @@ def v9():
     else:
         print("Test v9: Invalid choice!")
 
+# Node v10 is "The Threat to the Protagonist becomes evidently more clear"
 def v10():
+    # Node v11 is "Climax: The result of what happens to Protagonist from previous Event."
     choice = input("You can choose 'v11': ")
     if choice == "v11":
         UserChoice.append(choice)
@@ -942,8 +964,12 @@ def v10():
     else:
         print("Test v11: Invalid choice!")
 
+# Node v11 is "Climax: The result of what happens to Protagonist from previous Event."
 def v11():
     if 'v7' in UserChoice:
+        # Node v13 is "Ending 2: Get Home, with Love Interest"
+        # Node v15 is "Ending 4: Get Home, but Love Interest must or is left behind
+        # in the other/abnormal world."
         choice = input("You can choose 'v13' or 'v15': ")
         if choice == "v13":
             UserChoice.append(choice)
@@ -956,6 +982,9 @@ def v11():
         else:
             print("Test v11()-v13 and v11()-v13: Invalid Choice")
     elif 'v6' in UserChoice:
+        # Node v12 is "Ending 1: Get Home, with a happy ending."
+        # Node v14 is "Ending 3: Get Home with Protagonist negatively changed.
+        # OR Protagonist ends up trapped in the other/abnormal world."
         choice = input("You can choose 'v12' or 'v14': ")
         if choice == "v12":
             UserChoice.append(choice)
