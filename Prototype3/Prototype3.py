@@ -296,6 +296,9 @@ def q8():
     # If so, it means branch chains q11 are unlocked
     # But also lets the User can down the  q9 and q10 path.
     if 'q5' in UserChoice:
+        # Node q9 is "Event/Obstacle 1 in Journey has Failed"
+        # Node q10 is "Event/Obstacle 1 in Journey has Passed"
+        # Node q11 is "Event/Obstacle 1 is a 'Buddy' quest"
         choice = input("You can choose 'q9', 'q10' or 'q11': ")
         if choice == "q11": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
@@ -314,6 +317,8 @@ def q8():
     # Checks to see if element "q4" exist in UserChoice List
     # If so, then branch chains q9 and q10 are unlocked
     elif 'q4' in UserChoice:
+        # Node q9 is "Event/Obstacle 1 in Journey has Failed"
+        # Node q10 is "Event/Obstacle 1 in Journey has Passed"
         choice = input("You can choose 'q9' or 'q10': ")
         if choice == "q9": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
@@ -330,6 +335,7 @@ def q8():
 
 # Node q9 is "Event/Obstacle 1 in Journey has Failed"
 def q9():
+    # Node q15 is "Event 1 resolution"
     choice = input("You can choose 'q15': ")
     if choice == "q15":
         UserChoice.append(choice)
@@ -340,6 +346,7 @@ def q9():
 
 # Node q10 is "Event/Obstacle 1 in Journey has Passed"
 def q10():
+    # Node q15 is "Event 1 resolution"
     choice = input("You can choose 'q15': ")
     if choice == "q15":
         UserChoice.append(choice)
@@ -350,6 +357,8 @@ def q10():
 
 # Node q11 is "Event/Obstacle 1 is a 'Buddy' quest"
 def q11():
+    # Node q12 is "Buddy Quest 1 Passed"
+    # Node q13 is "Buddy Quest 1 Failed"
     choice = input("You can choose 'q12' or 'q13': ")
     if choice == "q12":
         UserChoice.append(choice)
@@ -362,7 +371,9 @@ def q11():
     else:
         print("Test q12 and q13: Invalid choice!")
 
+# Node q12 is "Buddy Quest 1 Passed"
 def q12():
+    # Node q14 is "Resolution of Buddy Quest 1"
     choice = input("You can choose q14": )
     if choice == "q14":
         UserChoice.append(choice)
@@ -371,7 +382,9 @@ def q12():
     else:
         print("Test q12()-q14(): Invalid choice!")
 
+# Node q13 is "Buddy Quest 1 Failed"
 def q13():
+    # Node q14 is "Resolution of Buddy Quest 1"
     choice = input("You can choose 'q14': ")
     if choice == "q14":
         UserChoice.append(choice)
@@ -380,7 +393,9 @@ def q13():
     else:
         print("Test q13()-q14(): Invalid choice!")
 
+# Node q14 is "Resolution of Buddy Quest 1"
 def q14():
+    # Node q15 is "Event 1 resolution"
     choice = input("You can choose 'q15': ")
     if choice == "q15":
         UserChoice.append(choice)
@@ -389,7 +404,9 @@ def q14():
     else:
         print("Test q14()-q15: Invalid choice!")
 
+# Node q15 is "Event 1 resolution"
 def q15():
+    # Node q16 is "Journey to Act 3 OR Start of Event/Obstacle 2 in Journey"
     choice = input("You can choose 'q16': ")
     if choice == "q16":
         UserChoice.append(choice)
@@ -398,7 +415,10 @@ def q15():
     else:
         print("Test q16: Invalid choice!")
 
+# Node q16 is "Journey to Act 3 OR Start of Event/Obstacle 2 in Journey"
 def q16():
+    # Node q17 is "Event/Obstacle 2 in Journey"
+    # Node q34 is "Starts Act 3"
     choice = input("You can choose 'q17' or 'q34': ")
     if choice == "q17":
         UserChoice.append(choice)
@@ -411,12 +431,16 @@ def q16():
     else:
         print("Test q17 and q34: Invalid choice!")
 
+# Node q17 is "Event/Obstacle 2 in Journey"
 # this Node reiterates the previous branch choices.
 def q17():
     # Checks to see if element "q5" exist in UserChoice List
     # If so, it means branch chains q20 are unlocked
     # But also lets the User can down the q18 and q19 path.
     if 'q5' in UserChoice:
+        # Node q18 is "Event/Obstacle 2, Passed, in Journey"
+        # Node q19 is "Eevnt/Obstacle 2, Failed, in Journey"
+        # Node q20 is "Event/Obstacle 2. Buddy Quest 2, In Journey"
         choice = input("You can choose 'q18', 'q19' or 'q20': ")
         if choice == "q18": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
@@ -435,6 +459,8 @@ def q17():
     # Checks to see if element "q4" exist in UserChoice List
     # If so, then branch chains q9 and q10 are unlocked
     elif 'q4' in UserChoice:
+        # Node q18 is "Event/Obstacle 2, Passed, in Journey"
+        # Node q19 is "Eevnt/Obstacle 2, Failed, in Journey"
         choice = input("You can choose 'q18' or 'q19': ")
         if choice == "q18": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
@@ -449,7 +475,9 @@ def q17():
     else:
         print("Test q18, q19 and q20: Invalid choice!")
 
+# Node q18 is "Event/Obstacle 2, Passed, in Journey"
 def q18():
+    # Node q24 is "Event 2 In Journey, Resolution"
     choice = input("You can choose 'q24': ")
     if choice == "q24":
         UserChoice.append(choice)
@@ -458,7 +486,9 @@ def q18():
     else:
         print("Test q18()-q24: Invalid choice!")
 
+# Node q19 is "Eevnt/Obstacle 2, Failed, in Journey"
 def q19():
+    # Node q24 is "Event 2 In Journey, Resolution"
     choice = input("You can choose 'q24': ")
     if choice == "q24":
         UserChoice.append(choice)
@@ -467,7 +497,10 @@ def q19():
     else:
         print("Test q19()-q24: Invalid choice!")
 
+# Node q20 is "Event/Obstacle 2. Buddy Quest 2, In Journey"
 def q20():
+    # Node q21 is "Buddy Quest 2, Passed"
+    # Node q22 is "Buddy Quest 2, Failed"
     choice = input("You can choose 'q21' or 'q22': ")
     if choice == "q21":
         UserChoice.append(choice)
@@ -480,7 +513,9 @@ def q20():
     else:
         print("Test q21 and q22: Invalid choice!")
 
+# Node q21 is "Buddy Quest 2, Passed"
 def q21():
+    # Node q23 is "Resolution from Buddy Quest 2"
     choice = input("You can choose 'q23': ")
     if choice == "q23":
         UserChoice.append(choice)
@@ -489,7 +524,9 @@ def q21():
     else:
         print("Test q21()-q23: Invalid choice!")
 
+# Node q22 is "Buddy Quest 2, Failed"
 def q22():
+    # Node q23 is "Resolution from Buddy Quest 2"
     choice = input("You can choose 'q23': ")
     if choice == "q23":
         UserChoice.append(choice)
@@ -498,7 +535,9 @@ def q22():
     else:
         print("Test q22()-q23: Invalid choice!")
 
+# Node q23 is "Resolution from Buddy Quest 2"
 def q23():
+    # Node q24 is "Event 2 In Journey, Resolution"
     choice = input("You can choose 'q24': ")
     if choice == "q24":
         UserChoice.append(choice)
@@ -507,7 +546,9 @@ def q23():
     else:
         print("Test q23()-q24: Invalid choice!")
 
+# Node q24 is "Event 2 In Journey, Resolution"
 def q24():
+    # Node q25 is "Journey to Act 3 or Event/Obstacle 3 in Journey"
     choice = input("You can choose 'q25': ")
     if choice == "q25":
         UserChoice.append(choice)
@@ -516,7 +557,10 @@ def q24():
     else:
         print("Test q24: Invalid choice!")
 
+# Node q25 is "Journey to Act 3 or Event/Obstacle 3 in Journey"
 def q25():
+    # Node q26 is "Event/Obstacle 3 in Journey"
+    # Node q34 is "Starts Act 3"
     choice = input("You can choose 'q26' or 'q34': ")
     if choice == "q26":
         UserChoice.append(choice)
@@ -529,11 +573,15 @@ def q25():
     else:
         print("Test q26 and q34: Invalid choice!")
 
+# Node q26 is "Event/Obstacle 3 in Journey"
 def q26():
     # Checks to see if element "q5" exist in UserChoice List
     # If so, it means branch chains q29 are unlocked
     # But also lets the User can down the q27 and q28 path.
     if 'q5' in UserChoice:
+        # Node q27 is "Event/Obstacle 3, Passed, in Journey"
+        # Node q28 is "Event/Obstacle 3, Failed, in Journey"
+        # Node q29 is "Buddy Quest 3 Event/Obstacle"
         choice = input("You can choose 'q27', 'q28' or 'q29': ")
         if choice == "q27": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
@@ -552,6 +600,8 @@ def q26():
     # Checks to see if element "q4" exist in UserChoice List
     # If so, then branch chains q27 and q28 are unlocked
     elif 'q4' in UserChoice:
+        # Node q27 is "Event/Obstacle 3, Passed, in Journey"
+        # Node q28 is "Event/Obstacle 3, Failed, in Journey"
         choice = input("You can choose 'q27' or 'q28': ")
         if choice == "q27": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
@@ -566,7 +616,9 @@ def q26():
     else:
         print("Test q27, q28 and q29: Invalid choice!")
 
+# Node q27 is "Event/Obstacle 3, Passed, in Journey"
 def q27():
+    # Node q33 is "Resolution from Event/Obstacle 3 in Journey"
     choice = input("You can choose 'q33': ")
     if choice == "q33":
         UserChoice.append(choice)
@@ -575,7 +627,9 @@ def q27():
     else:
         print("Test q27()-q33: Invalid choice!")
 
+# Node q28 is "Event/Obstacle 3, Failed, in Journey"
 def q28():
+    # Node q33 is "Resolution from Event/Obstacle 3 in Journey"
     choice = input("You can choose 'q33': ")
     if choice == "q33":
         UserChoice.append(choice)
@@ -584,7 +638,10 @@ def q28():
     else:
         print("Test q28()-q33: Invalid choice!")
 
+# Node q29 is "Buddy Quest 3 Event/Obstacle"
 def q29():
+    # Node q30 is "Buddy Quest 3, Passed"
+    # Node q31 is "Buddy Quest, Failed"
     choice = input("You can choose 'q30' or 'q31': ")
     if choice == "q30":
         UserChoice.append(choice)
@@ -597,7 +654,9 @@ def q29():
     else:
         print("Test q30 and q31: Invalid choice!")
 
+# Node q30 is "Buddy Quest 3, Passed"
 def q30():
+    # Node q32 is "Resolution from Bussy Quest 3"
     choice = input("You can choose 'q32': ")
     if choice == "q32":
         UserChoice.append(choice)
@@ -606,7 +665,9 @@ def q30():
     else:
         print("Test q30()-q32: Invalid choice!")
 
+# Node q31 is "Buddy Quest, Failed"
 def q31():
+    # Node q32 is "Resolution from Bussy Quest 3"
     choice = input("You can choose 'q32': ")
     if choice == "q32":
         UserChoice.append(choice)
@@ -615,7 +676,9 @@ def q31():
     else:
         print("Test q31()-q32: Invalid choice!")
 
+# Node q32 is "Resolution from Bussy Quest 3"
 def q32():
+    # Node q33 is "Resolution from Event/Obstacle 3 in Journey"
     choice = input("You can choose 'q33': ")
     if choice == "q33":
         UserChoice.append(choice)
@@ -624,7 +687,9 @@ def q32():
     else:
         print("Test q32()-q33: Invalid choice!")
 
+# Node q33 is "Resolution from Event/Obstacle 3 in Journey"
 def q33():
+    # Node q34 is "Starts Act 3"
     choice = input("You can choose'q34': ")
     if choice == "q34":
         UserChoice.append(choice)
@@ -637,8 +702,10 @@ def q33():
 ###                         ACT 3                            ###
 ################################################################
 
-# Leads to Node that intiates Act 3
+# Node q34 is "Starts Act 3"
 def q34():
+    # Node q35 is "Event that leds to 'Revelation'"
+    # Node q36 is "Revelation: True nature of the Elixir"
     choice = input("You can choose 'q35' or 'q36': ")
     if choice == "q35":
         UserChoice.append(choice)
@@ -651,7 +718,9 @@ def q34():
     else:
         print("Test q35 and q36: Invalid choice!")
 
+# Node q35 is "Event that leds to 'Revelation'"
 def q35():
+    # Node q36 is "Revelation: True nature of the Elixir"
     choice = input("You can choose 'q36': ")
     if choice == "q36":
         UserChoice.append(choice)
@@ -660,7 +729,10 @@ def q35():
     else:
         print("Test q35()-q36: Invalid choice!")
 
+# Node q36 is "Revelation: True nature of the Elixir"
 def q36():
+    # Node q37 is "Protagonist gets Elixir"
+    # Node q38 is "Protagonist doesn't get Elixir"
     choice = input("You can choose 'q37' or 'q38': ")
     if choice == "q37":
         UserChoice.append(choice)
@@ -673,7 +745,10 @@ def q36():
     else:
         print("Test q37 and q38: Invalid choice!")
 
+# Node q37 is "Protagonist gets Elixir"
 def q37():
+    # Node q39 is "Protagonist has negative charecter development change from Elixir Node Choice"
+    # Node q40 is "Protagonist has positive charecter development change from Elixir Node Choice"
     choice = input("You can choose 'q39' or 'q40': ")
     if choice == "q39":
         UserChoice.append(choice)
@@ -686,7 +761,10 @@ def q37():
     else:
         print("Test q37()-q39 and q37()-q40: Invalid choice!")
 
+# Node q38 is "Protagonist doesn't get Elixir"
 def q38():
+    # Node q39 is "Protagonist has negative charecter development change from Elixir Node Choice"
+    # Node q40 is "Protagonist has positive charecter development change from Elixir Node Choice"
     choice = input("You can choose 'q39' or 'q40': ")
     if choice == "q39":
         UserChoice.append(choice)
@@ -699,7 +777,10 @@ def q38():
     else:
         print("Test q38()-q39 and q38()-q40: Invalid choice!")
 
+# Node q39 is "Protagonist has negative charecter development change from Elixir Node Choice"
 def q39():
+    # Node q41 "Protagonist goes Home"
+    # Node q42 "Protagonist doesn't go Home"
     choice = input("You can choose 'q41' or 'q42': ")
     if choice == "q41":
         UserChoice.append(choice)
@@ -712,7 +793,10 @@ def q39():
     else:
         print("Test q39()-q41 and q39()-q42: Invalid choice!")
 
+# Node q40 is "Protagonist has positive charecter development change from Elixir Node Choice"
 def q40():
+    # Node q41 "Protagonist goes Home"
+    # Node q42 "Protagonist doesn't go Home"
     choice = input("You can choose 'q41' or 'q42': ")
     if choice == "q41":
         UserChoice.append(choice)
