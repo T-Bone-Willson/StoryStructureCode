@@ -825,7 +825,7 @@ def VandR_Chain(RootChoice):
     # Node v1 is "Inciting Incident: With no Intent of it to happen."
     # Node v2 is "Inciting Incident: With a vague sense of Intent of it to happen"
     choice = input("You can choose 'v1' or 'v2': ")
-    if choice == "v1": # player needs to input this in order to proceed through branch
+    if choice == "v1":
         UserChoice.append(choice)
         print(UserChoice)
         v1()
@@ -834,13 +834,142 @@ def VandR_Chain(RootChoice):
         print(UserChoice)
         v2()
     else:
-        print("Test v1 and V2: Invalid choice!")
+        print("Test v1 and v2: Invalid choice!")
 
+# Node v1 is "Inciting Incident: With no Intent of it to happen."
 def v1():
-    print("V1 Test!")
+    # Node v3 is "Protagonist is taken to Strange/Abnormal world"
+    choice = input("You can choose 'v3': ")
+    if choice == "v3":
+        UserChoice.append(choice)
+        print(UserChoice)
+        v3()
+    else:
+        print("Test v1()-v3: Invalid choice!")
 
+# Node v2 is "Inciting Incident: With a vague sense of Intent of it to happen"
 def v2():
-    print("V2 Test!")
+    # Node v3 is "Protagonist is taken to Strange/Abnormal world"
+    choice = input("You can choose 'v3': ")
+    if choice == "v3":
+        UserChoice.append(choice)
+        print(UserChoice)
+        v3()
+    else:
+        print("Test v2()-v3: Invalid choice!")
+
+def v3():
+    choice = input("You can choose 'v4' or 'v5': ")
+    if choice == "v4":
+        UserChoice.append(choice)
+        print(UserChoice)
+        v4()
+    elif choice == "v5":
+        UserChoice.append(choice)
+        print(UserChoice)
+        v5()
+    else:
+        print("Test v4 and v5: Invalid choice!")
+
+def v4():
+    choice = input("You can choose 'v6' or 'v7': ")
+    if choice == "v6":
+        UserChoice.append(choice)
+        print(UserChoice)
+        v6()
+    elif choice == "v7":
+        UserChoice.append(choice)
+        print(UserChoice)
+        v7()
+    else:
+        print("Test v4()-v6 and v4()-v7: Invalid choice!")
+
+def v5():
+    choice = input("You can choose 'v6' or 'v7': ")
+    if choice == "v6":
+        UserChoice.append(choice)
+        print(UserChoice)
+        v6()
+    elif choice == "v7":
+        UserChoice.append(choice)
+        print(UserChoice)
+        v7()
+    else:
+        print("Test v5()-v6 and v5()-v7: Invalid choice!")
+
+def v6():
+    choice = input("You can choose 'v8': ")
+    if choice == "v8":
+        UserChoice.append(choice)
+        print(UserChoice)
+        v8()
+    else:
+        print("Test v6()-v8: Invalid choice!")
+
+def v7():
+    choice = input("You can choose 'v8': ")
+    if choice == "v8":
+        UserChoice.append(choice)
+        print(UserChoice)
+        v8()
+    else:
+        print("Test v7()-v8: Invalid choice!")
+
+def v8():
+    choice = input("You can choose 'v9': ")
+    if choice == "v9":
+        UserChoice.append(choice)
+        print(UserChoice)
+        v9()
+    else:
+        print("Test v9: Invalid choice!")
+
+def v9():
+    choice = input("You can choose 'v10': ")
+    if choice == "v10":
+        UserChoice.append(choice)
+        print(UserChoice)
+        v10()
+    else:
+        print("Test v9: Invalid choice!")
+
+def v10():
+    choice = input("You can choose 'v11': ")
+    if choice == "v11":
+        UserChoice.append(choice)
+        print(UserChoice)
+        v11()
+    else:
+        print("Test v11: Invalid choice!")
+
+def v11():
+    if 'v7' in UserChoice:
+        choice = input("You can choose 'v13' or 'v15': ")
+        if choice == "v13":
+            UserChoice.append(choice)
+            print(UserChoice)
+            print("You have reached the end of Voyage and Return Branch")
+        elif choice == "v15":
+            UserChoice.append(choice)
+            print(UserChoice)
+            print("You have reached the end of Voyage and Return Branch")
+        else:
+            print("Test v11()-v13 and v11()-v13: Invalid Choice")
+    elif 'v6' in UserChoice:
+        choice = input("You can choose 'v12' or 'v14': ")
+        if choice == "v12":
+            UserChoice.append(choice)
+            print(UserChoice)
+            print("You have reached the end of Voyage and Return Branch")
+        elif choice == "v14":
+            UserChoice.append(choice)
+            print(UserChoice)
+            print("You have reached the end of Voyage and Return Branch")
+        else:
+            print("Test v11()-v13 and v11()-v13: Invalid Choice")
+    else:
+        print("Honestly don't think this Test Print can happen...")
+
 
 ################################################################
 ###                                                          ###
