@@ -24,11 +24,7 @@ Adventure_Graph_Elements = {"a" : ["a1", "a2"],
                     }
 
 # Quest Branch Code Dictionary
-Quest_Graph_Elements = {""
-
-
-
-                    }
+#Quest_Graph_Elements = {}
 
 
 ################################################################
@@ -259,33 +255,33 @@ def a12():
 def Q_Chain(RootChoice):
     # Node q is "Home"
     UserChoice.append("q") # Adds Branch root to List
-    # Node q2 is "Reason why Charecter wants Elixir"
-    # Node q3 is "Inciting Incident"
-    choice = input("You can choose 'q2' or 'q3': ")
-    if choice == "q2": # player needs to input this in order to proceed through branch
+    # Node q1 is "Reason why Charecter wants Elixir"
+    # Node q2 is "Inciting Incident"
+    choice = input("You can choose 'q1' or 'q2': ")
+    if choice == "q1": # player needs to input this in order to proceed through branch
+        UserChoice.append(choice)
+        print(UserChoice)
+        q1()
+    elif choice == "q2":
         UserChoice.append(choice)
         print(UserChoice)
         q2()
-    elif choice == "q3":
+    else:
+        print("Test q1 and q2: Invalid choice!")
+
+# Node q1 is "Reason why Charecter wants Elixir"
+def q1():
+    # Node q2 is "Inciting Incident"
+    choice = input("You can choose 'q2': ")
+    if choice == "q2":
         UserChoice.append(choice)
         print(UserChoice)
-        q3()
+        q2()
     else:
-        print("Test q2 and q3: Invalid choice!")
+        print("Test q2: Invalid choice!")
 
-# Node q2 is "Reason why Charecter wants Elixir"
+# Node q2 is "Inciting Incident"
 def q2():
-    # Node q3 is "Inciting Incident"
-    choice = input("You can choose 'q3': ")
-    if choice == "q3":
-        UserChoice.append(choice)
-        print(UserChoice)
-        q3()
-    else:
-        print("Test q3: Invalid choice!")
-
-# Node q3 is "Inciting Incident"
-def q3():
     # Node q4 is "Don't gather 'buddies' for journey, Protagonist will journey alone"
     # Node q5 is "gather 'Buddies'", Protagoniost will journey with company
     choice = input("You can choose 'q4' or 'q5': ")
