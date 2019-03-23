@@ -1,10 +1,6 @@
 # users choice stored in an empty list.
 UserChoice = []
 
-# Global Variables for Node definition
-a1 = "a1: The elixir is an object"
-a2 = "a2: The elixir is a person"
-
 ################################################################
 ###                                                          ###
 ###              Adventure Branch Function Code              ###
@@ -13,17 +9,10 @@ a2 = "a2: The elixir is a person"
 
 # Start of Adventure branch chain. Triggerd by User making choice "a" at start of program.
 def A_Chain(RootChoice):
+    # Node a is "Home: Protagonist is there and they want the Elixir"
     UserChoice.append("a") # Adds Branch root to List
-    # For reasons I don't fully understand, I have to state it as global
-    # Even though it has been declared global, outside the scope of the function
-    global a1
-    global a2
-    # Then reassign the value to the "global a1" or "global a2"
-    # This is duplicating the code and it's not what I originally intended.
-    a1 = "a1: The elixir is an object"
-    a2 = "a2: The elixir is a person"
-    print(a1)
-    print(a2)
+    # Node a1 is "Elixir: It is inanimate object"
+    # Node a2 is "Elixir: Is another charecter"
     choice = input("You can choose 'a1' or 'a2': ")
     if choice == "a1": # player needs to input this in order to proceed through branch
         UserChoice.append(choice)
@@ -36,10 +25,13 @@ def A_Chain(RootChoice):
     else:
         print("Test a1 and a2: Invalid choice!")
 
-# a1() function means the elixir is not a person.
-# by having element "a1" in UserChoice List, it means that
-# Function a9() will be unlocked automaticaly
-# but will close off Function a10()
+#-------------------------------------------------------------#
+# a1() function means the elixir is not a person.             #
+# by having element "a1" in UserChoice List, it means that    #
+# Function a9() will be unlocked automaticaly                 #
+# but will close off Function a10()                           #
+#-------------------------------------------------------------#
+# Node a2 is "Elixir: Is another charecter"
 def a1():
     choice = input("You can choose 'a3': ")
     if choice == "a3":
@@ -49,11 +41,15 @@ def a1():
     else:
         print("Test a1()-a3: Invalid choice!")
 
-# a2() function means the elixir is a person.
-# by having element "a2" in UserChoice List, it means that
-# Function a10() will be unlocked automaticaly
-# but will close off Function a9()
+#-------------------------------------------------------------#
+# a2() function means the elixir is a person.                 #
+# by having element "a2" in UserChoice List, it means that    #
+# Function a10() will be unlocked automaticaly                #
+# but will close off Function a9()                            #
+#-------------------------------------------------------------#
+# Node a2 is "Elixir: Is another charecter"
 def a2():
+    # Node a3 is "Inciting Incident: Forces the Protagonist to commence the Adventure/Journey"
     choice = input("You can choose 'a3': ")
     if choice == "a3":
         UserChoice.append(choice)
@@ -62,7 +58,9 @@ def a2():
     else:
         print("Test  a2()-a3: Invalid choice!")
 
+# Node a3 is "Inciting Incident: Forces the Protagonist to commence the Adventure/Journey"
 def a3():
+    # Node a4 is "Protagonist commences the Journey"
     choice = input("You can choose 'a4': ")
     if choice == "a4":
         UserChoice.append(choice)
@@ -71,7 +69,9 @@ def a3():
     else:
         print("Test a4: Invalid choice!")
 
+# Node a4 is "Protagonist commences the Journey"
 def a4():
+    # Node a5 is "Journey: Protagonist goes to new, differnt world/places."
     choice = input("You can choose 'a5': ")
     if choice == "a5":
         UserChoice.append(choice)
@@ -80,7 +80,11 @@ def a4():
     else:
         print("Test a5: Invalid choice!")
 
+# Node a5 is "Journey: Protagonist goes to new, differnt world/places."
 def a5():
+    # Node a6 is "Midpoint: Something from the previous Plot Point/Node will cause a dramatic moment
+    # for the Protagonist, to which they will have to overcome, and will then lead to the next place
+    # within their Journey."
     choice = input("You can choose 'a6': ")
     if choice == "a6":
         UserChoice.append(choice)
@@ -89,7 +93,12 @@ def a5():
     else:
         print("Test a6: Invalid choice!")
 
+# Node a6 is "Midpoint: Something from the previous Plot Point/Node will cause a dramatic moment
+# for the Protagonist, to which they will have to overcome, and will then lead to the next place
+# within their Journey."
 def a6():
+    # Node a7 "The effects of the Midpoint lead the Protagonist into a new and
+    # unfamilair place, in search for the Elixir."
     choice = input("You can choose 'a7': ")
     if choice == "a7":
         UserChoice.append(choice)
@@ -98,7 +107,12 @@ def a6():
     else:
         print("Test a7: Invalid choice!")
 
+# Node a7 "The effects of the Midpoint lead the Protagonist into a new and
+# unfamilair place, in search for the Elixir."
 def a7():
+    # Node a8 is "Conflict: The series of events throughout the story so far will lead
+    # to the conflict in which the Protagonist has to overcome to carry on the Journey
+    # and get the Elixir."
     choice = input("You can choose 'a8': ")
     if choice == "a8":
         UserChoice.append(choice)
@@ -107,10 +121,14 @@ def a7():
     else:
         print("Test a8: Invalid choice!")
 
+# Node a8 is "Conflict: The series of events throughout the story so far will lead
+# to the conflict in which the Protagonist has to overcome to carry on the Journey
+# and get the Elixir."
 def a8():
     # Checks to see if element "a2" exist in UserChoice List
     # If so, it means branch chains a10 and onwards are unlocked
     if 'a2' in UserChoice:
+        # Node a10 is "Elixir: Protagonist gets Elixir, who is another charecter."
         choice = input("You can choose 'a10': ")
         if choice == "a10": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
@@ -119,6 +137,7 @@ def a8():
     # Checks to see if element "a1" exist in UserChoice List
     # If so, then branch chains a9, a13 and a14 are unlocked
     elif 'a1' in UserChoice:
+        # Node a9 is "Elixir: Inanimate Elixir is aquired."
         choice = input("You can choose 'a9': ")
         if choice == "a9": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
@@ -128,17 +147,27 @@ def a8():
         print("Test a9 OR a10: Invalid choice!")
 
 # Adventure Branch with no possible love interest is operated from this chain
+# Node a9 is "Elixir: Inanimate Elixir is aquired."
 def a9():
-    choice = input("You can choose 'a13': ")
+    # Node a13 is "End: Protagonist Goes Home"
+    # Node a14 is "End: Protagonist Carries on with Journey, doesn't go Home"
+    choice = input("You can choose 'a13' or 'a14': ")
     if choice == "a13":
         UserChoice.append(choice)
         print(UserChoice)
         print("You have reached the end of this Branch!")
+    elif choice == "a14":
+        UserChoice.append(choice)
+        print(UserChoice)
+        print("You have reached the end of this Branch")
     else:
-        print("Test a13: Invalid choice!")
+        print("Test a13 and a14: Invalid choice!")
 
 # Adventure Branch with possible love interest is operated from this chain
+# Node a10 is "Elixir: Protagonist gets Elixir, who is another charecter."
 def a10():
+    # Node a11 is "Elixir Charecter: Romance happens."
+    # Node a12 is "Elixir Charecter: Romance doesn't happen."
     choice = input("You can choose 'a11' or 'a12': ")
     if choice == "a11":
         UserChoice.append(choice)
@@ -151,7 +180,10 @@ def a10():
     else:
         print("Test a11 and a12: Invalid choice!")
 
+# Node a11 is "Elixir Charecter: Romance happens."
 def a11():
+    # Node a13 is "End: Protagonist Goes Home"
+    # Node a14 is "End: Protagonist Carries on with Journey, doesn't go Home"
     choice = input("You can choose 'a13' or 'a14': ")
     if choice == "a13":
         UserChoice.append(choice)
@@ -164,7 +196,10 @@ def a11():
     else:
         print("Test a11()-a13 and a11()-a14: Invalid choice!")
 
+# Node a12 is "Elixir Charecter: Romance doesn't happen."
 def a12():
+    # Node a13 is "End: Protagonist Goes Home"
+    # Node a14 is "End: Protagonist Carries on with Journey, doesn't go Home"
     choice = input("You can choose 'a13' or 'a14': ")
     if choice == "a13":
         UserChoice.append(choice)
@@ -176,6 +211,10 @@ def a12():
         print("You have reached the end of this Branch!")
     else:
         print("Test a12()-a13 and a12()-a14: Invalid choice!")
+
+################################################################
+###                Adventure Branch Code Finished            ###
+################################################################
 
 ################################################################
 ###                                                          ###
@@ -1011,6 +1050,9 @@ def v11():
     else:
         print("Honestly don't think this Test Print can happen...")
 
+################################################################
+###          Voyage and Return Branch Code Finished          ###
+################################################################
 
 ################################################################
 ###                                                          ###
