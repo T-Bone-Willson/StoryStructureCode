@@ -2,6 +2,36 @@
 UserChoice = []
 
 ################################################################
+###         Dictionary/Graph for Adventure, Quest and        ###
+###                     Voyage & Return                      ###
+################################################################
+
+# Adventure Branch Code Dictionary
+Adventure_Graph_Elements = {"a" : ["a1", "a2"],
+                    "a1" : ["a3"],
+                    "a2" : ["a3"],
+                    "a3" : ["a4"],
+                    "a4" : ["a5"],
+                    "a6" : ["a7"],
+                    "a7" : ["a8"],
+                    "a8" : ["a9", "a10"],
+                    "a9" : ["a13", "a14"],
+                    "a10" : ["a11", "a12"],
+                    "a11" : ["a13", "a14"],
+                    "a12" : ["a13", "a14"],
+                    "a13" : [], # Key will be empty since there are no more nodes connected to it
+                    "a14" : []
+                    }
+
+# Quest Branch Code Dictionary
+Quest_Graph_Elements = {""
+
+
+
+                    }
+
+
+################################################################
 ###                                                          ###
 ###              Adventure Branch Function Code              ###
 ###                                                          ###
