@@ -188,7 +188,10 @@ def a12():
 ################################################################
 
 def Q_Chain(RootChoice):
+    # Node q is "Home"
     UserChoice.append("q") # Adds Branch root to List
+    # Node q2 is "Reason why Charecter wants Elixir"
+    # Node q3 is "Inciting Incident"
     choice = input("You can choose 'q2' or 'q3': ")
     if choice == "q2": # player needs to input this in order to proceed through branch
         UserChoice.append(choice)
@@ -201,7 +204,9 @@ def Q_Chain(RootChoice):
     else:
         print("Test q2 and q3: Invalid choice!")
 
+# Node q2 is "Reason why Charecter wants Elixir"
 def q2():
+    # Node q3 is "Inciting Incident"
     choice = input("You can choose 'q3': ")
     if choice == "q3":
         UserChoice.append(choice)
@@ -210,7 +215,10 @@ def q2():
     else:
         print("Test q3: Invalid choice!")
 
+# Node q3 is "Inciting Incident"
 def q3():
+    # Node q4 is "Don't gather 'buddies' for journey, Protagonist will journey alone"
+    # Node q5 is "gather 'Buddies'", Protagoniost will journey with company
     choice = input("You can choose 'q4' or 'q5': ")
     if choice == "q4":
         UserChoice.append(choice)
@@ -224,7 +232,10 @@ def q3():
     else:
         print("Test q4 and q5: Invalid choice!")
 
+# Node q4 is "Don't gather 'buddies' for journey, Protagonist will journey alone"
 def q4():
+    # Node q6 is "Helper" will be present in the story.
+    # Node q7 is "Commencing the Journey"
     choice = input("You can choose 'q6' or 'q7': ")
     if choice == "q6":
         UserChoice.append(choice)
@@ -237,7 +248,10 @@ def q4():
     else:
         print("Test q4()-q6 and q4()-q7: Invalid choice!")
 
+# Node q5 is "gather 'Buddies'", Protagoniost will journey with company
 def q5():
+    # Node q6 is "Helper" will be present in the story.
+    # Node q7 is "Commencing the Journey"
     choice = input("You can choose 'q6' or 'q7': ")
     if choice == "q6":
         UserChoice.append(choice)
@@ -250,8 +264,9 @@ def q5():
     else:
         print("Test q5()-q6 and q5()-q7: Invalid choice!")
 
-# This only happens if Buddy has been unlocked.
+# Node q6 is "Helper" will be present in the story.
 def q6():
+    # Node q7 is "Commencing the Journey"
     choice = input("You can choose 'q7': ")
     if choice == "q7":
         UserChoice.append(choice)
@@ -260,7 +275,9 @@ def q6():
     else:
         print("Test q7: Invalid choice!")
 
+# Node q7 is "Commencing the Journey"
 def q7():
+    # Node q8 is "Event/Obstacle 1 in Journey"
     choice = input("You can choose 'q8': ")
     if choice == "q8":
         UserChoice.append(choice)
@@ -273,6 +290,7 @@ def q7():
 ###                         ACT 2                            ###
 ################################################################
 
+# Node q8 is "Event/Obstacle 1 in Journey"
 def q8():
     # Checks to see if element "q5" exist in UserChoice List
     # If so, it means branch chains q11 are unlocked
@@ -310,6 +328,7 @@ def q8():
     else:
         print("I DON'T KNOW!")
 
+# Node q9 is "Event/Obstacle 1 in Journey has Failed"
 def q9():
     choice = input("You can choose 'q15': ")
     if choice == "q15":
@@ -319,6 +338,7 @@ def q9():
     else:
         print("Test q9()-q15: Invalid choice!")
 
+# Node q10 is "Event/Obstacle 1 in Journey has Passed"
 def q10():
     choice = input("You can choose 'q15': ")
     if choice == "q15":
@@ -328,18 +348,37 @@ def q10():
     else:
         print("Test q10()-q15: Invalid choice!")
 
+# Node q11 is "Event/Obstacle 1 is a 'Buddy' quest"
 def q11():
     choice = input("You can choose 'q12' or 'q13': ")
     if choice == "q12":
         UserChoice.append(choice)
         print(UserChoice)
-        q14()
+        q12()
     elif choice == "q13":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q13()
+    else:
+        print("Test q12 and q13: Invalid choice!")
+
+def q12():
+    choice = input("You can choose q14": )
+    if choice == "q14":
         UserChoice.append(choice)
         print(UserChoice)
         q14()
     else:
-        print("Test q12 and q13: Invalid choice!")
+        print("Test q12()-q14(): Invalid choice!")
+
+def q13():
+    choice = input("You can choose 'q14': ")
+    if choice == "q14":
+        UserChoice.append(choice)
+        print(UserChoice)
+        q14()
+    else:
+        print("Test q13()-q14(): Invalid choice!")
 
 def q14():
     choice = input("You can choose 'q15': ")
@@ -688,7 +727,7 @@ def q40():
 
 ################################################################
 ###                 Quest Branch Code Finished               ###
-################################################################   
+################################################################
 
 ################################################################
 ###                                                          ###
