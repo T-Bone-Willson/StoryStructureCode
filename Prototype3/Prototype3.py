@@ -33,6 +33,10 @@ Quest_Graph_Elements = {}
 ###                                                          ###
 ################################################################
 
+################################################################
+###                         ACT 1                            ###
+################################################################
+
 # Start of Adventure branch chain. Triggerd by User making choice "a" at start of program.
 def A_Chain(RootChoice):
     # Node a is "Home: Protagonist is there and they want the Elixir"
@@ -95,6 +99,10 @@ def a3():
     else:
         print("Test a4: Invalid choice!")
 
+################################################################
+###                         ACT 2                            ###
+################################################################
+
 # Node a4 is "Protagonist commences the Journey"
 def a4():
     # Node a5 is "Journey: Protagonist goes to new, differnt world/places."
@@ -146,6 +154,10 @@ def a7():
         a8()
     else:
         print("Test a8: Invalid choice!")
+
+################################################################
+###                         ACT 3                            ###
+################################################################
 
 # Node a8 is "Conflict: The series of events throughout the story so far will lead
 # to the conflict in which the Protagonist has to overcome to carry on the Journey
