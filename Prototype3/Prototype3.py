@@ -9,7 +9,7 @@ UserChoice = []
 # Adventure Branch Code Dictionary
 Adventure_Graph_Elements = {"a" : ["a1", "a2"],
                     "a1" : ["a3"],
-                    "a2" : ["a3"],
+                    "a2" : ["a3"], # Can't represent "Romance Condition" properly here...
                     "a3" : ["a4"],
                     "a4" : ["a5"],
                     "a6" : ["a7"],
@@ -66,9 +66,25 @@ Quest_Graph_Elements = {"q" : ["q1," "q2"],
                     "q39" : ["q40", "q41"],
                     "q40" : [], # Key will be empty since there are no more nodes connected to it
                     "q41" : []
+                    }
 
-
-
+# Voyage and Return Branch Code Diciontary
+VandR_Graph_Elements = {"v" : ["v1", "v2"],
+                    "v1" : ["v3"],
+                    "v2" : ["v3"],
+                    "v3" : ["v4", "v5"],
+                    "v4" : ["v6", "v7"],
+                    "v5" : ["v6", "v7"],
+                    "v6" : ["v8"],
+                    "v7" : ["v8"],
+                    "v8" : ["v9"],
+                    "v9" : ["v10"],
+                    "v10" : ["v11"],
+                    "v11" : ["v12", "v13", "v14", "v15"],
+                    "v12" : [], # Key will be empty since there are no more nodes connected to it
+                    "v13" : [], # Can't represent "Romance Condition" properly here...
+                    "v14" : [],
+                    "v15" : []
                     }
 
 
