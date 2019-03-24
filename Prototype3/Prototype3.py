@@ -93,6 +93,12 @@ VandR_Graph_Elements = {"v" : ["v1", "v2"],
 ###                                                          ###
 ################################################################
 
+########################################################################
+###                                                                  ###
+###  Disclamier! "class graph:" code was made from this tutorial:    ###
+###      https://www.tutorialspoint.com/python/python_graphs.htm     ###
+###                                                                  ###
+########################################################################
 class graph:
     def __init__(self, graph_dictionary = None):
         if graph_dictionary is None:
@@ -118,45 +124,72 @@ a = graph(Adventure_Graph_Elements) # name of the Dictionary
 q = graph(Quest_Graph_Elements)
 v = graph(VandR_Graph_Elements)
 
+#############################################################
+###                   End of Disclamier                   ###
+#############################################################
 
-#print(a.getNodes()) # Print all nodes in graph
-#print(a.getEdges()) # print all edges within graph
-
+# Allows User to print Nodes, Edges or Both from Adventure_Graph_Elements
 def A_Graph(RootChoice):
     print("Welcome to the Adventure Graph Dictionary.")
     choice = input("You can choose to print 'Nodes', 'Edges' or 'Both': ")
     if choice == "Nodes":
+        print("")
+        print("Nodes:")
         print(a.getNodes()) # Print all nodes in graph
     elif choice == "Edges":
+        print("")
+        print("Edges:")
         print(a.getEdges()) # print all edges within graph
     elif choice == "Both":
+        print("")
+        print("Nodes:")
         print(a.getNodes()) # Print all nodes in graph
+        print("")
+        print("Edges:")
         print(a.getEdges()) # print all edges within graph
     else:
         print("Test Adventure Graph Dictionary: Invalid choice!")
 
+# Allows User to print Nodes, Edges or Both from Quest_Graph_Elements
 def Q_Graph(RootChoice):
     print("Welcome to the Quest Graph Dictionary.")
     choice = input("You can choose to print 'Nodes', 'Edges' or 'Both': ")
     if choice == "Nodes":
+        print("")
+        print("Nodes:")
         print(q.getNodes()) # Print all nodes in graph
     elif choice == "Edges":
+        print("")
+        print("Edges:")
         print(q.getEdges()) # print all edges within graph
     elif choice == "Both":
+        print("")
+        print("Nodes:")
         print(q.getNodes()) # Print all nodes in graph
+        print("")
+        print("Edges:")
         print(q.getEdges()) # print all edges within graph
     else:
         print("Test Quest Graph Dictionary: Invalid choice!")
 
+# Allows User to print Nodes, Edges or Both from VandR_Graph_Elements
 def VandR_Graph(RootChoice):
     print("Welcome to the Voyage and Return Graph Dictionary.")
     choice = input("You can choose to print 'Nodes', 'Edges' or 'Both': ")
     if choice == "Nodes":
+        print("")
+        print("Nodes:")
         print(v.getNodes()) # Print all nodes in graph
     elif choice == "Edges":
+        print("")
+        print("Edges:")
         print(v.getEdges()) # print all edges within graph
     elif choice == "Both":
+        print("")
+        print("Nodes:")
         print(v.getNodes()) # Print all nodes in graph
+        print("")
+        print("Edges:")
         print(v.getEdges()) # print all edges within graph
     else:
         print("Test Voyage and Return Graph Dictionary: Invalid choice!")
