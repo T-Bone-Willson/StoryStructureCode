@@ -1,6 +1,9 @@
 # users choice stored in an empty list.
 UserChoice = []
 
+# List that will print out Node Descriptors for all of Users Choices
+TemplateList = []
+
 ################################################################
 ###         Dictionary/Graph for Adventure, Quest and        ###
 ###                     Voyage & Return                      ###
@@ -208,15 +211,20 @@ def VandR_Graph(RootChoice):
 def A_Chain(RootChoice):
     # Node a is "Home: Protagonist is there and they want the Elixir"
     UserChoice.append("a") # Adds Branch root to List
-    # Node a1 is "Elixir: It is inanimate object"
-    # Node a2 is "Elixir: Is another charecter"
+    TemplateList.append(str("ACT 1 \n"))
+    a = "Node a is 'Home: Protagonist is there and they want the Elixir'\n"
+    TemplateList.append(a)
+    print('Node a1 is "Elixir: It is inanimate object"\n')
+    print('Node a2 is "Elixir: Is another charecter"\n')
     choice = input("You can choose 'a1' or 'a2': ")
     if choice == "a1": # player needs to input this in order to proceed through branch
         UserChoice.append(choice)
+        TemplateList.append(str('Node a1 is "Elixir: It is an inanimate object"\n'))
         print(UserChoice)
         a1()
     elif choice == "a2": # Will unlock a2() function/branch.
         UserChoice.append(choice)
+        TemplateList.append(str('Node a2 is "Elixir: Is another charecter"\n'))
         print(UserChoice)
         a2()
     else:
@@ -228,11 +236,14 @@ def A_Chain(RootChoice):
 # Function a9() will be unlocked automaticaly                 #
 # but will close off Function a10()                           #
 #-------------------------------------------------------------#
-# Node a2 is "Elixir: Is another charecter"
+# Node a1 is "Elixir: It is an inanimate object"
 def a1():
+    print("")
+    print('Node a3 is "Inciting Incident: Forces the Protagonist to commence the Adventure/Journey"\n')
     choice = input("You can choose 'a3': ")
     if choice == "a3":
         UserChoice.append(choice)
+        TemplateList.append(str('Node a3 is "Inciting Incident: Forces the Protagonist to commence the Adventure/Journey"\n'))
         print(UserChoice)
         a3()
     else:
@@ -246,10 +257,12 @@ def a1():
 #-------------------------------------------------------------#
 # Node a2 is "Elixir: Is another charecter"
 def a2():
-    # Node a3 is "Inciting Incident: Forces the Protagonist to commence the Adventure/Journey"
+    print("")
+    print('Node a3 is "Inciting Incident: Forces the Protagonist to commence the Adventure/Journey"\n')
     choice = input("You can choose 'a3': ")
     if choice == "a3":
         UserChoice.append(choice)
+        TemplateList.append(str('Node a3 is "Inciting Incident: Forces the Protagonist to commence the Adventure/Journey"\n'))
         print(UserChoice)
         a3()
     else:
@@ -257,10 +270,13 @@ def a2():
 
 # Node a3 is "Inciting Incident: Forces the Protagonist to commence the Adventure/Journey"
 def a3():
-    # Node a4 is "Protagonist commences the Journey"
+    print("")
+    print('Node a4 is "Protagonist commences the Journey"\n')
     choice = input("You can choose 'a4': ")
     if choice == "a4":
         UserChoice.append(choice)
+        TemplateList.append(str('Node a4 is "Protagonist commences the Journey"\n'))
+        TemplateList.append(str('ACT 2 \n'))
         print(UserChoice)
         a4()
     else:
@@ -272,10 +288,12 @@ def a3():
 
 # Node a4 is "Protagonist commences the Journey"
 def a4():
-    # Node a5 is "Journey: Protagonist goes to new, differnt world/places."
+    print("")
+    print('Node a5 is "Journey: Protagonist goes to new, differnt world/places."\n')
     choice = input("You can choose 'a5': ")
     if choice == "a5":
         UserChoice.append(choice)
+        TemplateList.append(str('Node a5 is "Journey: Protagonist goes to new, differnt world/places."\n'))
         print(UserChoice)
         a5()
     else:
@@ -283,12 +301,15 @@ def a4():
 
 # Node a5 is "Journey: Protagonist goes to new, differnt world/places."
 def a5():
+    print("")
     # Node a6 is "Midpoint: Something from the previous Plot Point/Node will cause a dramatic moment
     # for the Protagonist, to which they will have to overcome, and will then lead to the next place
     # within their Journey."
+    print('Node a6 is "Midpoint: Something from the previous Plot Point/Node will cause a dramatic moment for the Protagonist, to which they will have to overcome, and will then lead to the next place within their Journey."\n')
     choice = input("You can choose 'a6': ")
     if choice == "a6":
         UserChoice.append(choice)
+        TemplateList.append(str('Node a6 is "Midpoint: Something from the previous Plot Point/Node will cause a dramatic moment for the Protagonist, to which they will have to overcome, and will then lead to the next place within their Journey."\n'))
         print(UserChoice)
         a6()
     else:
@@ -298,54 +319,64 @@ def a5():
 # for the Protagonist, to which they will have to overcome, and will then lead to the next place
 # within their Journey."
 def a6():
+    print("")
     # Node a7 "The effects of the Midpoint lead the Protagonist into a new and
     # unfamilair place, in search for the Elixir."
+    print('Node a7 is "The effects of the Midpoint lead the Protagonist into a new and unfamilair place, in search for the Elixir."\n')
     choice = input("You can choose 'a7': ")
     if choice == "a7":
         UserChoice.append(choice)
+        TemplateList.append(str('Node a7 is "The effects of the Midpoint lead the Protagonist into a new and unfamilair place, in search for the Elixir."\n'))
+        TemplateList.append(str('ACT 3 \n'))
         print(UserChoice)
         a7()
     else:
         print("Test a7: Invalid choice!")
 
+################################################################
+###                         ACT 3                            ###
+################################################################
+
 # Node a7 "The effects of the Midpoint lead the Protagonist into a new and
 # unfamilair place, in search for the Elixir."
 def a7():
+    print("")
     # Node a8 is "Conflict: The series of events throughout the story so far will lead
     # to the conflict in which the Protagonist has to overcome to carry on the Journey
     # and get the Elixir."
+    print('Node a8 is "Conflict: The series of events throughout the story so far will lead to the conflict in which the Protagonist has to overcome to carry on the Journey and get the Elixir."\n')
     choice = input("You can choose 'a8': ")
     if choice == "a8":
         UserChoice.append(choice)
+        TemplateList.append(str('Node a8 is "Conflict: The series of events throughout the story so far will lead to the conflict in which the Protagonist has to overcome to carry on the Journey and get the Elixir."\n'))
         print(UserChoice)
         a8()
     else:
         print("Test a8: Invalid choice!")
 
-################################################################
-###                         ACT 3                            ###
-################################################################
-
 # Node a8 is "Conflict: The series of events throughout the story so far will lead
 # to the conflict in which the Protagonist has to overcome to carry on the Journey
 # and get the Elixir."
 def a8():
+    print("")
     # Checks to see if element "a2" exist in UserChoice List
     # If so, it means branch chains a10 and onwards are unlocked
     if 'a2' in UserChoice:
-        # Node a10 is "Elixir: Protagonist gets Elixir, who is another charecter."
+        print('Node a10 is "Elixir: Protagonist gets Elixir, who is another charecter.\n')
         choice = input("You can choose 'a10': ")
         if choice == "a10": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
+            TemplateList.append(str('Node a10 is "Elixir: Protagonist gets Elixir, who is another charecter.\n'))
             print(UserChoice)
             a10()
     # Checks to see if element "a1" exist in UserChoice List
     # If so, then branch chains a9, a13 and a14 are unlocked
     elif 'a1' in UserChoice:
-        # Node a9 is "Elixir: Inanimate Elixir is aquired."
+        print('Node a9 is "Elixir: Inanimate Elixir is aquired.\n')
         choice = input("You can choose 'a9': ")
         if choice == "a9": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
+            TemplateList.append(str('Node a9 is "Elixir: Inanimate Elixir is aquired.\n'))
             print(UserChoice)
             a9()
     else:
@@ -354,32 +385,40 @@ def a8():
 # Adventure Branch with no possible love interest is operated from this chain
 # Node a9 is "Elixir: Inanimate Elixir is aquired."
 def a9():
-    # Node a13 is "End: Protagonist Goes Home"
-    # Node a14 is "End: Protagonist Carries on with Journey, doesn't go Home"
+    print("")
+    print('Node a13 is "End: Protagonist Goes Home"\n')
+    print('Node a14 is "End: Protagonist Carries on with Journey, doesnt go Home"\n')
     choice = input("You can choose 'a13' or 'a14': ")
     if choice == "a13":
         UserChoice.append(choice)
+        TemplateList.append(str('Node a13 is "End: Protagonist Goes Home"\n'))
         print(UserChoice)
         print("You have reached the end of this Branch!")
+        end()
     elif choice == "a14":
         UserChoice.append(choice)
+        TemplateList.append(str('Node a14 is "End: Protagonist Carries on with Journey, doesnt go Home"\n'))
         print(UserChoice)
         print("You have reached the end of this Branch")
+        end()
     else:
         print("Test a13 and a14: Invalid choice!")
 
 # Adventure Branch with possible love interest is operated from this chain
 # Node a10 is "Elixir: Protagonist gets Elixir, who is another charecter."
 def a10():
-    # Node a11 is "Elixir Charecter: Romance happens."
-    # Node a12 is "Elixir Charecter: Romance doesn't happen."
+    print("")
+    print('Node a11 is "Elixir Charecter: Romance happens."\n')
+    print('Node a12 is "Elixir Charecter: Romance doesnt happen."\n')
     choice = input("You can choose 'a11' or 'a12': ")
     if choice == "a11":
         UserChoice.append(choice)
+        TemplateList.append(str('Node a11 is "Elixir Charecter: Romance happens."\n'))
         print(UserChoice)
         a11()
     elif choice == 'a12':
         UserChoice.append(choice)
+        TemplateList.append(str('Node a12 is "Elixir Charecter: Romance doesnt happen."\n'))
         print(UserChoice)
         a12()
     else:
@@ -387,33 +426,43 @@ def a10():
 
 # Node a11 is "Elixir Charecter: Romance happens."
 def a11():
-    # Node a13 is "End: Protagonist Goes Home"
-    # Node a14 is "End: Protagonist Carries on with Journey, doesn't go Home"
+    print("")
+    print('Node a13 is "End: Protagonist Goes Home"\n')
+    print('Node a14 is "End: Protagonist Carries on with Journey, doesnt go Home"\n')
     choice = input("You can choose 'a13' or 'a14': ")
     if choice == "a13":
         UserChoice.append(choice)
+        TemplateList.append(str('Node a13 is "End: Protagonist Goes Home"\n'))
         print(UserChoice)
         print("You have reached the end of this Branch!")
+        end()
     elif choice == 'a14':
         UserChoice.append(choice)
+        TemplateList.append(str('Node a14 is "End: Protagonist Carries on with Journey, doesnt go Home"\n'))
         print(UserChoice)
         print("You have reached the end of this Branch!")
+        end()
     else:
         print("Test a11()-a13 and a11()-a14: Invalid choice!")
 
 # Node a12 is "Elixir Charecter: Romance doesn't happen."
 def a12():
-    # Node a13 is "End: Protagonist Goes Home"
-    # Node a14 is "End: Protagonist Carries on with Journey, doesn't go Home"
+    print("")
+    print('Node a13 is "End: Protagonist Goes Home"\n')
+    print('Node a14 is "End: Protagonist Carries on with Journey, doesnt go Home"\n')
     choice = input("You can choose 'a13' or 'a14': ")
     if choice == "a13":
         UserChoice.append(choice)
+        TemplateList.append(str('Node a13 is "End: Protagonist Goes Home"\n'))
         print(UserChoice)
         print("You have reached the end of this Branch!")
+        end()
     elif choice == 'a14':
         UserChoice.append(choice)
+        TemplateList.append(str('Node a14 is "End: Protagonist Carries on with Journey, doesnt go Home"\n'))
         print(UserChoice)
         print("You have reached the end of this Branch!")
+        end()
     else:
         print("Test a12()-a13 and a12()-a14: Invalid choice!")
 
@@ -1258,6 +1307,15 @@ def v11():
 ################################################################
 ###          Voyage and Return Branch Code Finished          ###
 ################################################################
+
+def end():
+    print("######################################################################")
+    print("")
+    print("What You Choose")
+    print(UserChoice)
+    print("")
+    for elem in TemplateList:
+        print(elem)
 
 ################################################################
 ###                                                          ###
