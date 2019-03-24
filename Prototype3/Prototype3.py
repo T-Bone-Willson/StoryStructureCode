@@ -135,6 +135,32 @@ def A_Graph(RootChoice):
     else:
         print("Test Adventure Graph Dictionary: Invalid choice!")
 
+def Q_Graph(RootChoice):
+    print("Welcome to the Quest Graph Dictionary.")
+    choice = input("You can choose to print 'Nodes', 'Edges' or 'Both': ")
+    if choice == "Nodes":
+        print(q.getNodes()) # Print all nodes in graph
+    elif choice == "Edges":
+        print(q.getEdges()) # print all edges within graph
+    elif choice == "Both":
+        print(q.getNodes()) # Print all nodes in graph
+        print(q.getEdges()) # print all edges within graph
+    else:
+        print("Test Quest Graph Dictionary: Invalid choice!")
+
+def VandR_Graph(RootChoice):
+    print("Welcome to the Voyage and Return Graph Dictionary.")
+    choice = input("You can choose to print 'Nodes', 'Edges' or 'Both': ")
+    if choice == "Nodes":
+        print(v.getNodes()) # Print all nodes in graph
+    elif choice == "Edges":
+        print(v.getEdges()) # print all edges within graph
+    elif choice == "Both":
+        print(v.getNodes()) # Print all nodes in graph
+        print(v.getEdges()) # print all edges within graph
+    else:
+        print("Test Voyage and Return Graph Dictionary: Invalid choice!")
+
 ################################################################
 ###                                                          ###
 ###              Adventure Branch Function Code              ###
@@ -1207,7 +1233,7 @@ def v11():
 ################################################################
 
 #Presents user with Root choices of a, b, or c. Dependent on choice, will call it's associated Function
-RootChoice = input("Choose a, q, v or AdventureGraph: ")
+RootChoice = input("Choose a, q, v, AdventureGraph, QuestGraph or VoyageGraph: ")
 if RootChoice == "a":
     A_Chain(RootChoice) # Goes to Adventure Branch Code
 elif RootChoice == "q":
@@ -1216,5 +1242,9 @@ elif RootChoice == "v":
     VandR_Chain(RootChoice) # Goes to Voyage and return Branch Code
 elif RootChoice == "AdventureGraph":
     A_Graph(RootChoice)
+elif RootChoice == "QuestGraph":
+    Q_Graph(RootChoice)
+elif RootChoice == "VoyageGraph":
+    VandR_Graph(RootChoice)
 else:
     print("SORRY! Invalid choice!") # error handler... kinda
