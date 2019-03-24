@@ -118,9 +118,22 @@ a = graph(Adventure_Graph_Elements) # name of the Dictionary
 q = graph(Quest_Graph_Elements)
 v = graph(VandR_Graph_Elements)
 
-#Print test statement
-print(a.getNodes()) # Print all nodes in graph
-print(a.getEdges()) # print all edges within graph
+
+#print(a.getNodes()) # Print all nodes in graph
+#print(a.getEdges()) # print all edges within graph
+
+def A_Graph(RootChoice):
+    print("Welcome to the Adventure Graph Dictionary.")
+    choice = input("You can choose to print 'Nodes', 'Edges' or 'Both': ")
+    if choice == "Nodes":
+        print(a.getNodes()) # Print all nodes in graph
+    elif choice == "Edges":
+        print(a.getEdges()) # print all edges within graph
+    elif choice == "Both":
+        print(a.getNodes()) # Print all nodes in graph
+        print(a.getEdges()) # print all edges within graph
+    else:
+        print("Test Adventure Graph Dictionary: Invalid choice!")
 
 ################################################################
 ###                                                          ###
@@ -1194,12 +1207,14 @@ def v11():
 ################################################################
 
 #Presents user with Root choices of a, b, or c. Dependent on choice, will call it's associated Function
-RootChoice = input("Choose a, q or v: ")
+RootChoice = input("Choose a, q, v or AdventureGraph: ")
 if RootChoice == "a":
     A_Chain(RootChoice) # Goes to Adventure Branch Code
 elif RootChoice == "q":
     Q_Chain(RootChoice) # Goes to Quest Branch Code
 elif RootChoice == "v":
     VandR_Chain(RootChoice) # Goes to Voyage and return Branch Code
+elif RootChoice == "AdventureGraph":
+    A_Graph(RootChoice)
 else:
     print("SORRY! Invalid choice!") # error handler... kinda
