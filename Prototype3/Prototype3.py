@@ -87,6 +87,40 @@ VandR_Graph_Elements = {"v" : ["v1", "v2"],
                     "v15" : []
                     }
 
+################################################################
+###                                                          ###
+###                Print Nodes and Edges Code                ###
+###                                                          ###
+################################################################
+
+class graph:
+    def __init__(self, graph_dictionary = None):
+        if graph_dictionary is None:
+            graph_dictionary = [] # sets graph_dictionary to an empty list
+        self.graph_dictionary = graph_dictionary
+
+# Get the keys of the dictionary
+    def getNodes(self):
+        return list(self.graph_dictionary.keys()) # "Keys()" method returns a list of
+                                                  # all avaliable keys in a dictionary
+
+# Find list of edges
+    def getEdges(self):
+        edge_name = []
+        for node in self.graph_dictionary:
+            for next_node in self.graph_dictionary[node]:
+                if {next_node, node} not in edge_name:
+                    edge_name.append({node, next_node})
+        return edge_name
+
+# "a", "q" and "v" is assigned the graph element values from the class graph
+a = graph(Adventure_Graph_Elements) # name of the Dictionary
+q = graph(Quest_Graph_Elements)
+v = graph(VandR_Graph_Elements)
+
+#Print test statement
+print(a.getNodes()) # Print all nodes in graph
+print(a.getEdges()) # print all edges within graph
 
 ################################################################
 ###                                                          ###
