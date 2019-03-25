@@ -485,17 +485,25 @@ def a12():
 ################################################################
 
 def Q_Chain(RootChoice):
+    print("")
+    TemplateList.append(str("ACT 1 \n"))
+    a = "Node q is 'Home: Protagonist is there at the start of the story'\n"
+    TemplateList.append(a)
+    print("ACT 1 \n")
     # Node q is "Home"
     UserChoice.append("q") # Adds Branch root to List
-    # Node q1 is "Reason why Charecter wants Elixir"
-    # Node q2 is "Inciting Incident"
+    print("Node q is 'Home: Protagonist is there at the start of the story'\n")
+    print('Node q1 is "Reason why Charecter wants Elixir"\n')
+    print('Node q2 is "Inciting Incident"\n')
     choice = input("You can choose 'q1' or 'q2': ")
     if choice == "q1": # player needs to input this in order to proceed through branch
         UserChoice.append(choice)
+        TemplateList.append(str('Node q1 is "Reason why Charecter wants Elixir"\n'))
         print(UserChoice)
         q1()
     elif choice == "q2":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q2 is "Inciting Incident"\n'))
         print(UserChoice)
         q2()
     else:
@@ -503,10 +511,12 @@ def Q_Chain(RootChoice):
 
 # Node q1 is "Reason why Charecter wants Elixir"
 def q1():
-    # Node q2 is "Inciting Incident"
+    print("")
+    print('Node q2 is "Inciting Incident"\n')
     choice = input("You can choose 'q2': ")
     if choice == "q2":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q2 is "Inciting Incident"\n'))
         print(UserChoice)
         q2()
     else:
@@ -514,16 +524,19 @@ def q1():
 
 # Node q2 is "Inciting Incident"
 def q2():
-    # Node q3 is "Don't gather 'buddies' for journey, Protagonist will journey alone"
-    # Node q4 is "gather 'Buddies'", Protagoniost will journey with company
+    print("")
+    print('Node q3 is "Dont gather buddies for journey, Protagonist will journey alone"\n')
+    print('Node q4 is "gather Buddies", Protagoniost will journey with company \n')
     choice = input("You can choose 'q3' or 'q4': ")
     if choice == "q3":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q3 is "Dont gather buddies for journey, Protagonist will journey alone"\n'))
         print(UserChoice)
         q3()
     # This unlocks the Buddy Quest/Event choices for Act 2.
     elif choice == "q4":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q4 is "gather Buddies", Protagoniost will journey with company \n'))
         print(UserChoice)
         q4()
     else:
@@ -531,15 +544,18 @@ def q2():
 
 # Node q3 is "Don't gather 'buddies' for journey, Protagonist will journey alone"
 def q3():
-    # Node q5 is "Helper" will be present in the story.
-    # Node q6 is "Commencing the Journey"
+    print("")
+    print('Node q5 is "Helper" will be present in the story.\n')
+    print('Node q6 is "Commencing the Journey"\n')
     choice = input("You can choose 'q5' or 'q6': ")
     if choice == "q5":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q5 is "Helper" will be present in the story.\n'))
         print(UserChoice)
         q5() # Unlocks "Helper" charecter.
     elif choice == "q6":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q6 is "Commencing the Journey"\n'))
         print(UserChoice)
         q6()
     else:
@@ -547,15 +563,18 @@ def q3():
 
 # Node q4 is "gather 'Buddies'", Protagoniost will journey with company
 def q4():
-    # Node q5 is "Helper" will be present in the story.
-    # Node q6 is "Commencing the Journey"
+    print("")
+    print('Node q5 is "Helper" will be present in the story.\n')
+    print('Node q6 is "Commencing the Journey"\n')
     choice = input("You can choose 'q5' or 'q6': ")
     if choice == "q5":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q5 is "Helper" will be present in the story.\n'))
         print(UserChoice)
         q5()
     elif choice == "q6":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q6 is "Commencing the Journey"\n'))
         print(UserChoice)
         q6()
     else:
@@ -563,10 +582,12 @@ def q4():
 
 # Node q5 is "Helper" will be present in the story.
 def q5():
-    # Node q6 is "Commencing the Journey"
+    print("")
+    print('Node q6 is "Commencing the Journey"\n')
     choice = input("You can choose 'q6': ")
     if choice == "q6":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q6 is "Commencing the Journey"\n'))
         print(UserChoice)
         q6()
     else:
@@ -574,10 +595,13 @@ def q5():
 
 # Node q6 is "Commencing the Journey"
 def q6():
-    # Node q7 is "Event/Obstacle 1 in Journey"
+    print("")
+    print('Node q7 is "Event/Obstacle 1 in Journey"\n')
     choice = input("You can choose 'q7': ")
     if choice == "q7":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q7 is "Event/Obstacle 1 in Journey"\n'))
+        TemplateList.append(str('ACT 2 \n'))
         print(UserChoice)
         q7()
     else:
@@ -593,20 +617,25 @@ def q7():
     # If so, it means branch chains q10 are unlocked
     # But also lets the User can down the  q8 and q9 path.
     if 'q4' in UserChoice:
-        # Node q8 is "Event/Obstacle 1 in Journey has Failed"
-        # Node q9 is "Event/Obstacle 1 in Journey has Passed"
-        # Node q10 is "Event/Obstacle 1 is a 'Buddy' quest"
+        print("")
+        print("ACT 2 \n")
+        print('Node q8 is "Event/Obstacle 1 in Journey has Failed"\n')
+        print('Node q9 is "Event/Obstacle 1 in Journey has Passed"\n')
+        print('Node q10 is "Event/Obstacle 1 is a Buddy quest"\n')
         choice = input("You can choose 'q8', 'q9' or 'q10': ")
         if choice == "q10": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
+            TemplateList.append(str('Node q10 is "Event/Obstacle 1 is a Buddy quest"\n'))
             print(UserChoice)
             q10()
         elif choice == "q8": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
+            TemplateList.append(str('Node q8 is "Event/Obstacle 1 in Journey has Failed"\n'))
             print(UserChoice)
             q8()
         elif choice == "q9":
             UserChoice.append(choice)
+            TemplateList.append(str('Node q9 is "Event/Obstacle 1 in Journey has Passed"\n'))
             print(UserChoice)
             q9()
         else:
@@ -614,15 +643,19 @@ def q7():
     # Checks to see if element "q3" exist in UserChoice List
     # If so, then branch chains q8 and q9 are unlocked
     elif 'q3' in UserChoice:
-        # Node q8 is "Event/Obstacle 1 in Journey has Failed"
-        # Node q9 is "Event/Obstacle 1 in Journey has Passed"
+        print("")
+        print("ACT 2 \n")
+        print('Node q8 is "Event/Obstacle 1 in Journey has Failed"\n')
+        print('Node q9 is "Event/Obstacle 1 in Journey has Passed"\n')
         choice = input("You can choose 'q8' or 'q9': ")
         if choice == "q8": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
+            TemplateList.append(str('Node q8 is "Event/Obstacle 1 in Journey has Failed"\n'))
             print(UserChoice)
             q8()
         elif choice == "q9":
             UserChoice.append(choice)
+            TemplateList.append(str('Node q9 is "Event/Obstacle 1 in Journey has Passed"\n'))
             print(UserChoice)
             q9()
         else:
@@ -632,10 +665,12 @@ def q7():
 
 # Node q8 is "Event/Obstacle 1 in Journey has Failed"
 def q8():
-    # Node q14 is "Event 1 resolution"
+    print("")
+    print('Node q14 is "Event 1 resolution"\n')
     choice = input("You can choose 'q14': ")
     if choice == "q14":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q14 is "Event 1 resolution"\n'))
         print(UserChoice)
         q14()
     else:
@@ -643,10 +678,12 @@ def q8():
 
 # Node q9 is "Event/Obstacle 1 in Journey has Passed"
 def q9():
-    # Node q14 is "Event 1 resolution"
+    print("")
+    print('Node q14 is "Event 1 resolution"\n')
     choice = input("You can choose 'q14': ")
     if choice == "q14":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q14 is "Event 1 resolution"\n'))
         print(UserChoice)
         q14()
     else:
@@ -654,15 +691,18 @@ def q9():
 
 # Node q10 is "Event/Obstacle 1 is a 'Buddy' quest"
 def q10():
-    # Node q11 is "Buddy Quest 1 Passed"
-    # Node q12 is "Buddy Quest 1 Failed"
+    print("")
+    print('Node q11 is "Buddy Quest 1 Passed"\n')
+    print('Node q12 is "Buddy Quest 1 Failed"\n')
     choice = input("You can choose 'q11' or 'q12': ")
     if choice == "q11":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q11 is "Buddy Quest 1 Passed"\n'))
         print(UserChoice)
         q11()
     elif choice == "q12":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q12 is "Buddy Quest 1 Failed"\n'))
         print(UserChoice)
         q12()
     else:
@@ -670,10 +710,12 @@ def q10():
 
 # Node q11 is "Buddy Quest 1 Passed"
 def q11():
-    # Node q13 is "Resolution of Buddy Quest 1"
+    print("")
+    print('Node q13 is "Resolution of Buddy Quest 1"\n')
     choice = input("You can choose q13: ")
     if choice == "q13":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q13 is "Resolution of Buddy Quest 1"\n'))
         print(UserChoice)
         q13()
     else:
@@ -681,10 +723,12 @@ def q11():
 
 # Node q12 is "Buddy Quest 1 Failed"
 def q12():
-    # Node q13 is "Resolution of Buddy Quest 1"
+    print("")
+    print('Node q13 is "Resolution of Buddy Quest 1"\n')
     choice = input("You can choose 'q13': ")
     if choice == "q13":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q13 is "Resolution of Buddy Quest 1"\n'))
         print(UserChoice)
         q13()
     else:
@@ -692,10 +736,12 @@ def q12():
 
 # Node q13 is "Resolution of Buddy Quest 1"
 def q13():
-    # Node q14 is "Event 1 resolution"
+    print("")
+    print('Node q14 is "Event 1 resolution"\n')
     choice = input("You can choose 'q14': ")
     if choice == "q14":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q14 is "Event 1 resolution"\n'))
         print(UserChoice)
         q14()
     else:
@@ -703,10 +749,12 @@ def q13():
 
 # Node q14 is "Event 1 resolution"
 def q14():
-    # Node q15 is "Journey to Act 3 OR Start of Event/Obstacle 2 in Journey"
+    print("")
+    print('Node q15 is "Journey to Act 3 OR Start of Event/Obstacle 2 in Journey"\n')
     choice = input("You can choose 'q15': ")
     if choice == "q15":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q15 is "Journey to Act 3 OR Start of Event/Obstacle 2 in Journey"\n'))
         print(UserChoice)
         q15()
     else:
@@ -714,15 +762,18 @@ def q14():
 
 # Node q15 is "Journey to Act 3 OR Start of Event/Obstacle 2 in Journey"
 def q15():
-    # Node q16 is "Event/Obstacle 2 in Journey"
-    # Node q33 is "Starts Act 3"
+    print("")
+    print('Node q16 is "Event/Obstacle 2 in Journey"\n')
+    print('Node q33 is "Starts Act 3"\n')
     choice = input("You can choose 'q16' or 'q33': ")
     if choice == "q16":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q16 is "Event/Obstacle 2 in Journey"\n'))
         print(UserChoice)
         q16()
     elif choice == "q33":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q33 is "Starts Act 3"\n'))
         print(UserChoice)
         q33()
     else:
@@ -735,20 +786,24 @@ def q16():
     # If so, it means branch chains q19 are unlocked
     # But also lets the User can down the q17 and q18 path.
     if 'q4' in UserChoice:
-        # Node q17 is "Event/Obstacle 2, Passed, in Journey"
-        # Node q18 is "Eevnt/Obstacle 2, Failed, in Journey"
-        # Node q19 is "Event/Obstacle 2. Buddy Quest 2, In Journey"
+        print("")
+        print('Node q17 is "Event/Obstacle 2, Passed, in Journey"\n')
+        print('Node q18 is "Eevnt/Obstacle 2, Failed, in Journey"\n')
+        print('Node q19 is "Event/Obstacle 2. Buddy Quest 2, In Journey"\n')
         choice = input("You can choose 'q17', 'q18' or 'q19': ")
         if choice == "q17": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
+            TemplateList.append(str('Node q17 is "Event/Obstacle 2, Passed, in Journey"\n'))
             print(UserChoice)
             q17()
         elif choice == "q18": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
+            TemplateList.append(str('Node q18 is "Eevnt/Obstacle 2, Failed, in Journey"\n'))
             print(UserChoice)
             q18()
         elif choice == "q19":
             UserChoice.append(choice)
+            TemplateList.append(str('Node q19 is "Event/Obstacle 2. Buddy Quest 2, In Journey"\n'))
             print(UserChoice)
             q19()
         else:
@@ -756,15 +811,18 @@ def q16():
     # Checks to see if element "q3" exist in UserChoice List
     # If so, then branch chains q8 and q9 are unlocked
     elif 'q3' in UserChoice:
-        # Node q17 is "Event/Obstacle 2, Passed, in Journey"
-        # Node q18 is "Eevnt/Obstacle 2, Failed, in Journey"
+        print("")
+        print('Node q17 is "Event/Obstacle 2, Passed, in Journey"\n')
+        print('Node q18 is "Eevnt/Obstacle 2, Failed, in Journey"\n')
         choice = input("You can choose 'q17' or 'q18': ")
         if choice == "q17": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
+            TemplateList.append(str('Node q17 is "Event/Obstacle 2, Passed, in Journey"\n'))
             print(UserChoice)
             q17()
         elif choice == "q18":
             UserChoice.append(choice)
+            TemplateList.append(str('Node q18 is "Eevnt/Obstacle 2, Failed, in Journey"\n'))
             print(UserChoice)
             q18()
         else:
@@ -774,10 +832,12 @@ def q16():
 
 # Node q17 is "Event/Obstacle 2, Passed, in Journey"
 def q17():
-    # Node q23 is "Event 2 In Journey, Resolution"
+    print("")
+    print('Node q23 is "Event 2 In Journey, Resolution"\n')
     choice = input("You can choose 'q23': ")
     if choice == "q23":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q23 is "Event 2 In Journey, Resolution"\n'))
         print(UserChoice)
         q23()
     else:
@@ -785,10 +845,12 @@ def q17():
 
 # Node q18 is "Eevnt/Obstacle 2, Failed, in Journey"
 def q18():
-    # Node q23 is "Event 2 In Journey, Resolution"
+    print("")
+    print('Node q23 is "Event 2 In Journey, Resolution"\n')
     choice = input("You can choose 'q23': ")
     if choice == "q23":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q23 is "Event 2 In Journey, Resolution"\n'))
         print(UserChoice)
         q23()
     else:
@@ -796,15 +858,18 @@ def q18():
 
 # Node q19 is "Event/Obstacle 2. Buddy Quest 2, In Journey"
 def q19():
-    # Node q20 is "Buddy Quest 2, Passed"
-    # Node q21 is "Buddy Quest 2, Failed"
+    print("")
+    print('Node q20 is "Buddy Quest 2, Passed"\n')
+    print('Node q21 is "Buddy Quest 2, Failed"\n')
     choice = input("You can choose 'q20' or 'q21': ")
     if choice == "q20":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q20 is "Buddy Quest 2, Passed"\n'))
         print(UserChoice)
         q20()
     elif choice == "q21":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q21 is "Buddy Quest 2, Failed"\n'))
         print(UserChoice)
         q21()
     else:
@@ -812,10 +877,12 @@ def q19():
 
 # Node q20 is "Buddy Quest 2, Passed"
 def q20():
-    # Node q22 is "Resolution from Buddy Quest 2"
+    print("")
+    print('Node q22 is "Resolution from Buddy Quest 2"\n')
     choice = input("You can choose 'q22': ")
     if choice == "q22":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q22 is "Resolution from Buddy Quest 2"\n'))
         print(UserChoice)
         q22()
     else:
@@ -823,10 +890,12 @@ def q20():
 
 # Node q21 is "Buddy Quest 2, Failed"
 def q21():
-    # Node q22 is "Resolution from Buddy Quest 2"
+    print("")
+    print('Node q22 is "Resolution from Buddy Quest 2"\n')
     choice = input("You can choose 'q22': ")
     if choice == "q22":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q22 is "Resolution from Buddy Quest 2"\n'))
         print(UserChoice)
         q22()
     else:
@@ -834,10 +903,12 @@ def q21():
 
 # Node q22 is "Resolution from Buddy Quest 2"
 def q22():
-    # Node q23 is "Event 2 In Journey, Resolution"
+    print("")
+    print('Node q23 is "Event 2 In Journey, Resolution"\n')
     choice = input("You can choose 'q23': ")
     if choice == "q23":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q23 is "Event 2 In Journey, Resolution"\n'))
         print(UserChoice)
         q23()
     else:
@@ -845,10 +916,12 @@ def q22():
 
 # Node q23 is "Event 2 In Journey, Resolution"
 def q23():
-    # Node q24 is "Journey to Act 3 or Event/Obstacle 3 in Journey"
+    print("")
+    print('Node q24 is "Journey to Act 3 or Event/Obstacle 3 in Journey"\n')
     choice = input("You can choose 'q24': ")
     if choice == "q24":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q24 is "Journey to Act 3 or Event/Obstacle 3 in Journey"\n'))
         print(UserChoice)
         q24()
     else:
@@ -856,15 +929,18 @@ def q23():
 
 # Node q24 is "Journey to Act 3 or Event/Obstacle 3 in Journey"
 def q24():
-    # Node q25 is "Event/Obstacle 3 in Journey"
-    # Node q33 is "Starts Act 3"
+    print("")
+    print('Node q25 is "Event/Obstacle 3 in Journey"\n')
+    print('Node q33 is "Starts Act 3"\n')
     choice = input("You can choose 'q25' or 'q33': ")
     if choice == "q25":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q25 is "Event/Obstacle 3 in Journey"\n'))
         print(UserChoice)
         q25()
     elif choice == "q33":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q33 is "Starts Act 3"\n'))
         print(UserChoice)
         q33()
     else:
@@ -876,20 +952,24 @@ def q25():
     # If so, it means branch chains q28 are unlocked
     # But also lets the User can down the q26 and q27 path.
     if 'q4' in UserChoice:
-        # Node q26 is "Event/Obstacle 3, Passed, in Journey"
-        # Node q27 is "Event/Obstacle 3, Failed, in Journey"
-        # Node q28 is "Buddy Quest 3 Event/Obstacle"
+        print("")
+        print('Node q26 is "Event/Obstacle 3, Passed, in Journey"\n')
+        print('Node q27 is "Event/Obstacle 3, Failed, in Journey"\n')
+        print('Node q28 is "Buddy Quest 3 Event/Obstacle"\n')
         choice = input("You can choose 'q26', 'q27' or 'q28': ")
         if choice == "q26": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
+            TemplateList.append(str('Node q26 is "Event/Obstacle 3, Passed, in Journey"\n'))
             print(UserChoice)
             q26()
         elif choice == "q27": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
+            TemplateList.append(str('Node q27 is "Event/Obstacle 3, Failed, in Journey"\n'))
             print(UserChoice)
             q27()
         elif choice == "q28":
             UserChoice.append(choice)
+            TemplateList.append(str('Node q28 is "Buddy Quest 3 Event/Obstacle"\n'))
             print(UserChoice)
             q28()
         else:
@@ -897,15 +977,18 @@ def q25():
     # Checks to see if element "q3" exist in UserChoice List
     # If so, then branch chains q26 and q27 are unlocked
     elif 'q3' in UserChoice:
-        # Node q26 is "Event/Obstacle 3, Passed, in Journey"
-        # Node q27 is "Event/Obstacle 3, Failed, in Journey"
+        print("")
+        print('Node q26 is "Event/Obstacle 3, Passed, in Journey"\n')
+        print('Node q27 is "Event/Obstacle 3, Failed, in Journey"\n')
         choice = input("You can choose 'q26' or 'q27': ")
         if choice == "q26": # Goes back to checking if input condition has been met
             UserChoice.append(choice)
+            TemplateList.append(str('Node q26 is "Event/Obstacle 3, Passed, in Journey"\n'))
             print(UserChoice)
             q26()
         elif choice == "q27":
             UserChoice.append(choice)
+            TemplateList.append(str('Node q27 is "Event/Obstacle 3, Failed, in Journey"\n'))
             print(UserChoice)
             q27()
         else:
@@ -915,10 +998,12 @@ def q25():
 
 # Node q26 is "Event/Obstacle 3, Passed, in Journey"
 def q26():
-    # Node q32 is "Resolution from Event/Obstacle 3 in Journey"
+    print("")
+    print('Node q32 is "Resolution from Event/Obstacle 3 in Journey"\n')
     choice = input("You can choose 'q32': ")
     if choice == "q32":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q32 is "Resolution from Event/Obstacle 3 in Journey"\n'))
         print(UserChoice)
         q32()
     else:
@@ -926,10 +1011,12 @@ def q26():
 
 # Node q27 is "Event/Obstacle 3, Failed, in Journey"
 def q27():
-    # Node q32 is "Resolution from Event/Obstacle 3 in Journey"
+    print("")
+    print('Node q32 is "Resolution from Event/Obstacle 3 in Journey"\n')
     choice = input("You can choose 'q32': ")
     if choice == "q32":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q32 is "Resolution from Event/Obstacle 3 in Journey"\n'))
         print(UserChoice)
         q32()
     else:
@@ -937,15 +1024,18 @@ def q27():
 
 # Node q28 is "Buddy Quest 3 Event/Obstacle"
 def q28():
-    # Node q29 is "Buddy Quest 3, Passed"
-    # Node q30 is "Buddy Quest, Failed"
+    print("")
+    print('Node q29 is "Buddy Quest 3, Passed"\n')
+    print('Node q30 is "Buddy Quest, Failed"\n')
     choice = input("You can choose 'q29' or 'q30': ")
     if choice == "q29":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q29 is "Buddy Quest 3, Passed"\n'))
         print(UserChoice)
         q29()
     elif choice == "q30":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q30 is "Buddy Quest, Failed"\n'))
         print(UserChoice)
         q30()
     else:
@@ -953,10 +1043,12 @@ def q28():
 
 # Node q29 is "Buddy Quest 3, Passed"
 def q29():
-    # Node q31 is "Resolution from Bussy Quest 3"
+    print("")
+    print('Node q31 is "Resolution from Buddy Quest 3"\n')
     choice = input("You can choose 'q31': ")
     if choice == "q31":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q31 is "Resolution from Buddy Quest 3"\n'))
         print(UserChoice)
         q31()
     else:
@@ -964,10 +1056,12 @@ def q29():
 
 # Node q30 is "Buddy Quest, Failed"
 def q30():
-    # Node q31 is "Resolution from Bussy Quest 3"
+    print("")
+    print('Node q31 is "Resolution from Bussy Quest 3"\n')
     choice = input("You can choose 'q31': ")
     if choice == "q31":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q31 is "Resolution from Buddy Quest 3"\n'))
         print(UserChoice)
         q31()
     else:
@@ -975,10 +1069,12 @@ def q30():
 
 # Node q31 is "Resolution from Bussy Quest 3"
 def q31():
-    # Node q32 is "Resolution from Event/Obstacle 3 in Journey"
+    print("")
+    print('Node q32 is "Resolution from Event/Obstacle 3 in Journey"\n')
     choice = input("You can choose 'q32': ")
     if choice == "q32":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q32 is "Resolution from Event/Obstacle 3 in Journey"\n'))
         print(UserChoice)
         q32()
     else:
@@ -986,10 +1082,13 @@ def q31():
 
 # Node q32 is "Resolution from Event/Obstacle 3 in Journey"
 def q32():
-    # Node q33 is "Starts Act 3"
+    print("")
+    print('Node q33 is "Starts Act 3"\n')
     choice = input("You can choose'q33': ")
     if choice == "q33":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q33 is "Starts Act 3"\n'))
+        TemplateList.append(str('ACT 3 \n'))
         print(UserChoice)
         q33()
     else:
@@ -1001,15 +1100,19 @@ def q32():
 
 # Node q33 is "Starts Act 3"
 def q33():
-    # Node q34 is "Event that leds to 'Revelation'"
-    # Node q35 is "Revelation: True nature of the Elixir"
+    print("")
+    print('ACT 3 \n')
+    print('Node q34 is "Event that leds to Revelation"\n')
+    print('Node q35 is "Revelation: True nature of the Elixir"\n')
     choice = input("You can choose 'q34' or 'q35': ")
     if choice == "q34":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q34 is "Event that leds to Revelation"\n'))
         print(UserChoice)
         q34()
     elif choice == "q35":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q35 is "Revelation: True nature of the Elixir"\n'))
         print(UserChoice)
         q35()
     else:
@@ -1017,10 +1120,12 @@ def q33():
 
 # Node q34 is "Event that leds to 'Revelation'"
 def q34():
-    # Node q35 is "Revelation: True nature of the Elixir"
+    print("")
+    print('Node q35 is "Revelation: True nature of the Elixir"\n')
     choice = input("You can choose 'q35': ")
     if choice == "q35":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q35 is "Revelation: True nature of the Elixir"\n'))
         print(UserChoice)
         q35()
     else:
@@ -1028,15 +1133,18 @@ def q34():
 
 # Node q35 is "Revelation: True nature of the Elixir"
 def q35():
-    # Node q36 is "Protagonist gets Elixir"
-    # Node q37 is "Protagonist doesn't get Elixir"
+    print("")
+    print('Node q36 is "Protagonist gets Elixir"\n')
+    print('Node q37 is "Protagonist doesnt get Elixir"\n')
     choice = input("You can choose 'q36' or 'q37': ")
     if choice == "q36":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q36 is "Protagonist gets Elixir"\n'))
         print(UserChoice)
         q36()
     elif choice == "q37":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q37 is "Protagonist doesnt get Elixir"\n'))
         print(UserChoice)
         q37()
     else:
@@ -1044,15 +1152,18 @@ def q35():
 
 # Node q36 is "Protagonist gets Elixir"
 def q36():
-    # Node q38 is "Protagonist has negative charecter development change from Elixir Node Choice"
-    # Node q39 is "Protagonist has positive charecter development change from Elixir Node Choice"
+    print("")
+    print('Node q38 is "Protagonist has negative charecter development change from Elixir Node Choice"\n')
+    print('Node q39 is "Protagonist has positive charecter development change from Elixir Node Choice"\n')
     choice = input("You can choose 'q38' or 'q39': ")
     if choice == "q38":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q38 is "Protagonist has negative charecter development change from Elixir Node Choice"\n'))
         print(UserChoice)
         q38()
     elif choice == "q39":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q39 is "Protagonist has positive charecter development change from Elixir Node Choice"\n'))
         print(UserChoice)
         q39()
     else:
@@ -1060,15 +1171,18 @@ def q36():
 
 # Node q37 is "Protagonist doesn't get Elixir"
 def q37():
-    # Node q38 is "Protagonist has negative charecter development change from Elixir Node Choice"
-    # Node q39 is "Protagonist has positive charecter development change from Elixir Node Choice"
+    print("")
+    print('Node q38 is "Protagonist has negative charecter development change from Elixir Node Choice"\n')
+    print('Node q39 is "Protagonist has positive charecter development change from Elixir Node Choice"\n')
     choice = input("You can choose 'q38' or 'q39': ")
     if choice == "q38":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q38 is "Protagonist has negative charecter development change from Elixir Node Choice"\n'))
         print(UserChoice)
         q38()
     elif choice == "q39":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q39 is "Protagonist has positive charecter development change from Elixir Node Choice"\n'))
         print(UserChoice)
         q39()
     else:
@@ -1076,33 +1190,43 @@ def q37():
 
 # Node q38 is "Protagonist has negative charecter development change from Elixir Node Choice"
 def q38():
-    # Node q40 "Protagonist goes Home"
-    # Node q41 "Protagonist doesn't go Home"
+    print("")
+    print('Node q40 "Protagonist goes Home"\n')
+    print('Node q41 "Protagonist doesnt go Home"\n')
     choice = input("You can choose 'q40' or 'q41': ")
     if choice == "q40":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q40 "Protagonist goes Home"\n'))
         print(UserChoice)
-        q40()
+        print("You have reached the end of the Quest Branch!")
+        end()
     elif choice == "q41":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q41 "Protagonist doesnt go Home"\n'))
         print(UserChoice)
-        q41()
+        print("You have reached the end of the Quest Branch!")
+        end()
     else:
         print("Test q38()-q40 and q38()-q41: Invalid choice!")
 
 # Node q39 is "Protagonist has positive charecter development change from Elixir Node Choice"
 def q39():
-    # Node q40 "Protagonist goes Home"
-    # Node q41 "Protagonist doesn't go Home"
+    print("")
+    print('Node q40 "Protagonist goes Home"\n')
+    print('Node q41 "Protagonist doesnt go Home"\n')
     choice = input("You can choose 'q40' or 'q41': ")
     if choice == "q40":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q40 "Protagonist goes Home"\n'))
         print(UserChoice)
         print("You have reached the end of the Quest Branch!")
+        end()
     elif choice == "q41":
         UserChoice.append(choice)
+        TemplateList.append(str('Node q41 "Protagonist doesnt go Home"\n'))
         print(UserChoice)
         print("You have reached the end of the Quest Branch!")
+        end()
     else:
         print("Test q39()-q40 and q39()-q41: Invalid choice!")
 
@@ -1364,7 +1488,10 @@ def v11():
 ################################################################
 
 def end():
-    print("######################################################################")
+    print("")
+    print("###################################################")
+    print("###                  Template                   ###")
+    print("###################################################")
     print("")
     print("What You Choose")
     print(UserChoice)
