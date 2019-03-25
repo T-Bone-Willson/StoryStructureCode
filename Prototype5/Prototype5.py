@@ -209,11 +209,13 @@ def VandR_Graph(RootChoice):
 
 # Start of Adventure branch chain. Triggerd by User making choice "a" at start of program.
 def A_Chain(RootChoice):
-    # Node a is "Home: Protagonist is there and they want the Elixir"
+    print("")
     UserChoice.append("a") # Adds Branch root to List
     TemplateList.append(str("ACT 1 \n"))
     a = "Node a is 'Home: Protagonist is there and they want the Elixir'\n"
     TemplateList.append(a)
+    print("ACT 1 \n")
+    print('Node a is "Home: Protagonist is there and they want the Elixir"\n')
     print('Node a1 is "Elixir: It is inanimate object"\n')
     print('Node a2 is "Elixir: Is another charecter"\n')
     choice = input("You can choose 'a1' or 'a2': ")
@@ -289,6 +291,7 @@ def a3():
 # Node a4 is "Protagonist commences the Journey"
 def a4():
     print("")
+    print("ACT 2 \n")
     print('Node a5 is "Journey: Protagonist goes to new, differnt world/places."\n')
     choice = input("You can choose 'a5': ")
     if choice == "a5":
@@ -341,6 +344,7 @@ def a6():
 # unfamilair place, in search for the Elixir."
 def a7():
     print("")
+    print("ACT 3 \n")
     # Node a8 is "Conflict: The series of events throughout the story so far will lead
     # to the conflict in which the Protagonist has to overcome to carry on the Journey
     # and get the Elixir."
@@ -1117,17 +1121,25 @@ def q39():
 ################################################################
 
 def VandR_Chain(RootChoice):
+    print("")
+    print("ACT 1 \n")
     # Node v is "Home"
     UserChoice.append("v") # Adds Branch root to List
-    # Node v1 is "Inciting Incident: With no Intent of it to happen."
-    # Node v2 is "Inciting Incident: With a vague sense of Intent of it to happen"
+    v = 'Node v is "Home: Protagonist starts the story there."\n'
+    TemplateList.append(str('ACT 1 \n'))
+    TemplateList.append(v)
+    print('Node v is "Home: Protagonist starts there."\n')
+    print('Node v1 is "Inciting Incident: With no Intent of it to happen."\n')
+    print('Node v2 is "Inciting Incident: With a vague sense of Intent of it to happen"\n')
     choice = input("You can choose 'v1' or 'v2': ")
     if choice == "v1":
         UserChoice.append(choice)
+        TemplateList.append(str('Node v1 is "Inciting Incident: With no Intent of it to happen."\n'))
         print(UserChoice)
         v1()
     elif choice == "v2":
         UserChoice.append(choice)
+        TemplateList.append(str('Node v2 is "Inciting Incident: With a vague sense of Intent of it to happen"\n'))
         print(UserChoice)
         v2()
     else:
@@ -1135,11 +1147,14 @@ def VandR_Chain(RootChoice):
 
 # Node v1 is "Inciting Incident: With no Intent of it to happen."
 def v1():
+    print("")
     # Node v3 is "Protagonist is taken to 'other/abnormal world' which is
     # caused by the Inciting Incident 'v1' OR 'v2'"
+    print('Node v3 is "Protagonist is taken to other/abnormal world which is caused by the Inciting Incident v1 OR v2"\n')
     choice = input("You can choose 'v3': ")
     if choice == "v3":
         UserChoice.append(choice)
+        TemplateList.append(str('Node v3 is "Protagonist is taken to other/abnormal world which is caused by the Inciting Incident v1 OR v2"\n'))
         print(UserChoice)
         v3()
     else:
@@ -1147,11 +1162,14 @@ def v1():
 
 # Node v2 is "Inciting Incident: With a vague sense of Intent of it to happen"
 def v2():
+    print("")
     # Node v3 is "Protagonist is taken to 'other/abnormal world' which is
     # caused by the Inciting Incident"
+    print('Node v3 is "Protagonist is taken to other/abnormal world which is caused by the Inciting Incident v1 OR v2"\n')
     choice = input("You can choose 'v3': ")
     if choice == "v3":
         UserChoice.append(choice)
+        TemplateList.append('Node v3 is "Protagonist is taken to other/abnormal world which is caused by the Inciting Incident v1 OR v2"\n')
         print(UserChoice)
         v3()
     else:
@@ -1164,15 +1182,20 @@ def v2():
 # Node v3 is "Protagonist is taken to 'other/abnormal world' which is
 # caused by the Inciting Incident 'v1' OR 'v2'"
 def v3():
-    # Node v4 is "Protagonist Wants to explore the new 'other/abnormal world'."
-    # Node v5 is "Protagonist wants to imediately find their way back Home"
+    print("")
+    print("ACT 2 \n")
+    TemplateList.append(str('ACT 2 \n'))
+    print('Node v4 is "Protagonist Wants to explore the new other/abnormal world."\n')
+    print('Node v5 is "Protagonist wants to imediately find their way back Home"\n')
     choice = input("You can choose 'v4' or 'v5': ")
     if choice == "v4":
         UserChoice.append(choice)
+        TemplateList.append(str('Node v4 is "Protagonist Wants to explore the new other/abnormal world."\n'))
         print(UserChoice)
         v4()
     elif choice == "v5":
         UserChoice.append(choice)
+        TemplateList.append(str('Node v5 is "Protagonist wants to imediately find their way back Home"\n'))
         print(UserChoice)
         v5()
     else:
@@ -1180,15 +1203,18 @@ def v3():
 
 # Node v4 is "Protagonist Wants to explore the new 'other/abnormal world'."
 def v4():
-    # Node v6 is "There is no Love Interest character in story."
-    # Node v7 is "Protagonist meets Love Interest charecter."
+    print("")
+    print('Node v6 is "There is no Love Interest character in story."\n')
+    print('Node v7 is "Protagonist meets Love Interest charecter."\n')
     choice = input("You can choose 'v6' or 'v7': ")
     if choice == "v6":
         UserChoice.append(choice)
+        TemplateList.append(str('Node v6 is "There is no Love Interest character in story."\n'))
         print(UserChoice)
         v6()
     elif choice == "v7":
         UserChoice.append(choice)
+        TemplateList.append(str('Node v6 is "There is no Love Interest character in story."\n'))
         print(UserChoice)
         v7()
     else:
@@ -1196,15 +1222,18 @@ def v4():
 
 # Node v5 is "Protagonist wants to imediately find their way back Home"
 def v5():
-    # Node v6 is "There is no Love Interest character in story."
-    # Node v7 is "Protagonist meets Love Interest charecter."
+    print("")
+    print('Node v6 is "There is no Love Interest character in story."\n')
+    print('Node v7 is "Protagonist meets Love Interest charecter."\n')
     choice = input("You can choose 'v6' or 'v7': ")
     if choice == "v6":
         UserChoice.append(choice)
+        TemplateList.append(str('Node v6 is "There is no Love Interest character in story."\n'))
         print(UserChoice)
         v6()
     elif choice == "v7":
         UserChoice.append(choice)
+        TemplateList.append(str('Node v6 is "There is no Love Interest character in story."\n'))
         print(UserChoice)
         v7()
     else:
@@ -1212,10 +1241,12 @@ def v5():
 
 # Node v6 is "There is no Love Interest character in story."
 def v6():
-    # Node v8 is "Protagonist learns about the 'other/abnormal world' that they are in."
+    print("")
+    print('Node v8 is "Protagonist learns about the other/abnormal world that they are in."\n')
     choice = input("You can choose 'v8': ")
     if choice == "v8":
         UserChoice.append(choice)
+        TemplateList.append(str('Node v8 is "Protagonist learns about the other/abnormal world that they are in."\n'))
         print(UserChoice)
         v8()
     else:
@@ -1223,10 +1254,12 @@ def v6():
 
 # Node v7 is "Protagonist meets Love Interest charecter."
 def v7():
-    # Node v8 is "Protagonist learns about the 'other/abnormal world' that they are in."
+    print("")
+    print('Node v8 is "Protagonist learns about the other/abnormal world that they are in."\n')
     choice = input("You can choose 'v8': ")
     if choice == "v8":
         UserChoice.append(choice)
+        TemplateList.append(str('Node v8 is "Protagonist learns about the other/abnormal world that they are in."\n'))
         print(UserChoice)
         v8()
     else:
@@ -1234,10 +1267,12 @@ def v7():
 
 # Node v8 is "Protagonist learns about the 'other/abnormal world' that they are in."
 def v8():
-    # Node v9 is "Midpoint: Protagonist Frustration of 'other/abnormal world' predicament."5
+    print("")
+    print('Node v9 is "Midpoint: Protagonist Frustration of other/abnormal world predicament."\n')
     choice = input("You can choose 'v9': ")
     if choice == "v9":
         UserChoice.append(choice)
+        TemplateList.append(str('Node v9 is "Midpoint: Protagonist Frustration of other/abnormal world predicament."\n'))
         print(UserChoice)
         v9()
     else:
@@ -1245,60 +1280,74 @@ def v8():
 
 # Node v9 is "Midpoint: Protagonist Frustration of 'other/abnormal world' predicament."
 def v9():
-    # Node v10 is "The Threat to the Protagonist becomes evidently more clear"
+    print("")
+    print('Node v10 is "The Threat to the Protagonist becomes evidently more clear"\n')
     choice = input("You can choose 'v10': ")
     if choice == "v10":
         UserChoice.append(choice)
+        TemplateList.append(str('Node v10 is "The Threat to the Protagonist becomes evidently more clear"\n'))
         print(UserChoice)
         v10()
     else:
         print("Test v9: Invalid choice!")
 
+################################################################
+###                         ACT 3                            ###
+################################################################
+
 # Node v10 is "The Threat to the Protagonist becomes evidently more clear"
 def v10():
-    # Node v11 is "Climax: The result of what happens to Protagonist from previous Event."
+    print("")
+    print("ACT 3 \n")
+    TemplateList.append(str('ACT 3 \n'))
+    print('Node v11 is "Climax: The result of what happens to Protagonist from previous Event."\n')
     choice = input("You can choose 'v11': ")
     if choice == "v11":
         UserChoice.append(choice)
+        TemplateList.append(str('Node v11 is "Climax: The result of what happens to Protagonist from previous Event."\n'))
         print(UserChoice)
         v11()
     else:
         print("Test v11: Invalid choice!")
 
-################################################################
-###                         ACT 3                            ###
-################################################################
-
 # Node v11 is "Climax: The result of what happens to Protagonist from previous Event."
 def v11():
     if 'v7' in UserChoice:
-        # Node v13 is "Ending 2: Get Home, with Love Interest"
-        # Node v15 is "Ending 4: Get Home, but Love Interest must or is left behind
-        # in the other/abnormal world."
+        print("")
+        print('Node v13 is "Ending 2: Get Home, with Love Interest"\n')
+        print('Node v15 is "Ending 4: Get Home, but Love Interest must or is left behind in the other/abnormal world."\n')
         choice = input("You can choose 'v13' or 'v15': ")
         if choice == "v13":
             UserChoice.append(choice)
+            TemplateList.append(str('Node v13 is "Ending 2: Get Home, with Love Interest"\n'))
             print(UserChoice)
             print("You have reached the end of Voyage and Return Branch")
+            end()
         elif choice == "v15":
             UserChoice.append(choice)
+            TemplateList.append(str('Node v15 is "Ending 4: Get Home, but Love Interest must or is left behind in the other/abnormal world."\n'))
             print(UserChoice)
             print("You have reached the end of Voyage and Return Branch")
+            end()
         else:
             print("Test v11()-v13 and v11()-v13: Invalid Choice")
     elif 'v6' in UserChoice:
-        # Node v12 is "Ending 1: Get Home, with a happy ending."
-        # Node v14 is "Ending 3: Get Home with Protagonist negatively changed.
-        # OR Protagonist ends up trapped in the other/abnormal world."
+        print("")
+        print('Node v12 is "Ending 1: Get Home, with a happy ending."\n')
+        print('Node v14 is "Ending 3: Get Home with Protagonist negatively changed. OR Protagonist ends up trapped in the other/abnormal world."\n')
         choice = input("You can choose 'v12' or 'v14': ")
         if choice == "v12":
             UserChoice.append(choice)
+            TemplateList.append(str('Node v12 is "Ending 1: Get Home, with a happy ending."\n'))
             print(UserChoice)
             print("You have reached the end of Voyage and Return Branch")
+            end()
         elif choice == "v14":
             UserChoice.append(choice)
+            TemplateList.append(str('Node v14 is "Ending 3: Get Home with Protagonist negatively changed. OR Protagonist ends up trapped in the other/abnormal world."\n'))
             print(UserChoice)
             print("You have reached the end of Voyage and Return Branch")
+            end()
         else:
             print("Test v11()-v13 and v11()-v13: Invalid Choice")
     else:
@@ -1308,12 +1357,19 @@ def v11():
 ###          Voyage and Return Branch Code Finished          ###
 ################################################################
 
+################################################################
+###                                                          ###
+###                    Print Template                        ###
+###                                                          ###
+################################################################
+
 def end():
     print("######################################################################")
     print("")
     print("What You Choose")
     print(UserChoice)
     print("")
+    # prints all elements within TemplateList[]
     for elem in TemplateList:
         print(elem)
 
