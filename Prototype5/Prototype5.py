@@ -1507,12 +1507,12 @@ def end():
 ################################################################
 
 #Presents user with Root choices of a, b, or c. Dependent on choice, will call it's associated Function
-RootChoice = input("Choose a, q, v, AdventureGraph, QuestGraph or VoyageGraph: ")
-if RootChoice == "a":
+RootChoice = input("Choose Adventure, Quest, Voyage, AdventureGraph, QuestGraph or VoyageGraph: ")
+if RootChoice == "Adventure":
     A_Chain(RootChoice) # Goes to Adventure Branch Code
-elif RootChoice == "q":
+elif RootChoice == "Quest":
     Q_Chain(RootChoice) # Goes to Quest Branch Code
-elif RootChoice == "v":
+elif RootChoice == "Voyage":
     VandR_Chain(RootChoice) # Goes to Voyage and return Branch Code
 elif RootChoice == "AdventureGraph":
     A_Graph(RootChoice)
@@ -1521,4 +1521,6 @@ elif RootChoice == "QuestGraph":
 elif RootChoice == "VoyageGraph":
     VandR_Graph(RootChoice)
 else:
+    print("")
     print("SORRY! Invalid choice!") # error handler... kinda
+    print("")
